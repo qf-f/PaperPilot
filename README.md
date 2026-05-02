@@ -1,4 +1,11 @@
 # PaperPilot
+## 项目界面预览
+
+![Uploading b990deeb6697b4733098489785311677.png…]()
+
+<img width="1253" height="713" alt="58fab009a3a355af8517469803c40cdd" src="https://github.com/user-attachments/assets/ed6e6b63-c372-44ce-9a4d-25c3695a75f2" />
+
+<img width="1218" height="684" alt="f619b5715e01d399dd27054f2b3dc353" src="https://github.com/user-attachments/assets/41c5a801-2599-4894-8ef3-9889221463d5" />
 
 PaperPilot is a FastAPI-based academic paper assistant system.
 
