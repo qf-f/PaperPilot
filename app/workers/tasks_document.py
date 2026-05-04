@@ -8,7 +8,7 @@ from app.db.models.document import Document
 from app.db.models.document_chunk import DocumentChunk
 from app.db.models.task import AsyncTask
 from app.db.session import SessionLocal
-from app.rag.chunker import chunk_text_blocks
+from app.rag.chunkers import FixedChunker, HeadingAwareChunker
 from app.rag.indexer import insert_document_chunks
 from app.rag.parser import parse_file
 from app.workers.queue import get_document_queue
@@ -16,6 +16,15 @@ from app.workers.tasks_embedding import embed_document_chunks_task
 
 
 settings = get_settings()
+
+
+def _build_chunker(strategy: str, chunk_size: int, overlap: int):
+    normalized = strategy.strip().lower()
+    if normalized == "fixed":
+        return FixedChunker(chunk_size=chunk_size, overlap=overlap)
+    if normalized == "heading":
+        return HeadingAwareChunker(chunk_size=chunk_size, overlap=overlap)
+    raise ValueError(f"Unsupported CHUNK_STRATEGY: {strategy}. Expected fixed or heading.")
 
 
 def _get_latest_parse_task(db: Session, document_id: UUID) -> AsyncTask | None:
@@ -65,11 +74,12 @@ def parse_document_task(document_id: str) -> dict[str, str | int]:
             db.refresh(document)
 
             blocks = parse_file(document.file_path, document.file_type)
-            chunks = chunk_text_blocks(
-                blocks,
+            chunker = _build_chunker(
+                settings.chunk_strategy,
                 chunk_size=settings.chunk_size,
                 overlap=settings.chunk_overlap,
             )
+            chunks = chunker.chunk(blocks)
 
             db.execute(delete(DocumentChunk).where(DocumentChunk.document_id == document.id))
             inserted_count = insert_document_chunks(db, document, chunks)

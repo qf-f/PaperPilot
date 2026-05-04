@@ -79,6 +79,26 @@ Start RQ worker in another terminal:
 python -m app.workers.worker
 ```
 
+## RAG Evaluation
+
+Prepare a backend-only evaluation project and upload/index local PDFs:
+
+```powershell
+python eval/prepare_eval_project.py --api-url http://localhost:8000 --papers-dir paper
+```
+
+The prepare script prints `PROJECT_ID` and writes `eval/rag_eval_documents.json`, which maps `paper001`, `paper002`, ... to backend `document_id` values. The evaluator uses this map to restrict each question to its target paper and avoid cross-document retrieval.
+
+Run the multi-paper evaluation:
+
+```powershell
+python eval/run_rag_eval.py --project-id <PROJECT_ID> --api-url http://localhost:8000 --dataset eval/rag_eval_dataset_5papers_checked.jsonl --documents-map eval/rag_eval_documents.json --output eval/rag_eval_result_5papers.jsonl --summary-output eval/rag_eval_summary_5papers.json --save-badcases eval/rag_eval_badcases_5papers.jsonl
+```
+
+The result JSONL includes retrieved chunk previews, document/page/score lists, target document filters, `error_type`, and `fail_reason`. The badcases JSONL keeps only failed samples for manual review.
+
+`python -m py_compile` and `--help` are only smoke checks. The command above is a RAG integration evaluation, not a normal unit test.
+
 ## curl Examples
 
 Create project:

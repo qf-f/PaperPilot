@@ -5,6 +5,7 @@ from time import perf_counter
 from uuid import UUID
 
 from fastapi import status
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.agents.graph import run_knowledge_qa_graph
@@ -12,6 +13,7 @@ from app.core.config import get_settings
 from app.core.exceptions import AppError
 from app.db.models.agent_run import AgentRun
 from app.db.models.chat import ChatMessage, ChatSession
+from app.db.models.document import Document
 from app.db.models.project import PaperProject
 from app.db.models.tool_trace import ToolTrace
 from app.schemas.chat_schema import ChatRequest, ChatResponse, CitationItem, RetrievedChunkPreview
@@ -43,6 +45,8 @@ class ChatService:
         if project is None:
             raise AppError("Project not found", status.HTTP_404_NOT_FOUND)
 
+        document_ids = self._resolve_document_ids(project_id, request)
+
         session = self._get_or_create_session(
             project_id=project_id,
             user_id=user_id,
@@ -64,7 +68,7 @@ class ChatService:
             "chat start agent_run_id=%s project_id=%s document_ids=%s top_k=%s threshold=%s query=%s",
             agent_run.id,
             project_id,
-            request.document_ids,
+            document_ids,
             top_k,
             similarity_threshold,
             query,
@@ -77,7 +81,7 @@ class ChatService:
                     "project_id": str(project_id),
                     "session_id": str(session.id),
                     "query": query,
-                    "document_ids": request.document_ids or [],
+                    "document_ids": document_ids,
                     "top_k": top_k,
                     "similarity_threshold": similarity_threshold,
                     "trace": [],
@@ -157,6 +161,35 @@ class ChatService:
             self.db.commit()
             logger.exception("chat failed agent_run_id=%s error=%s", agent_run.id, exc)
             raise AppError(f"Knowledge QA failed: {exc}", status.HTTP_500_INTERNAL_SERVER_ERROR) from exc
+
+    def _resolve_document_ids(self, project_id: UUID, request: ChatRequest) -> list[str]:
+        document_ids = list(request.document_ids or [])
+        single_document_id = (request.document_id or "").strip()
+        if single_document_id:
+            document_ids.append(single_document_id)
+
+        deduped_document_ids = list(
+            dict.fromkeys(str(document_id).strip() for document_id in document_ids if str(document_id).strip())
+        )
+        if deduped_document_ids:
+            return deduped_document_ids
+
+        file_name = (request.file_name or "").strip()
+        if not file_name:
+            return []
+
+        stmt = (
+            select(Document)
+            .where(
+                Document.project_id == project_id,
+                or_(Document.original_filename == file_name, Document.stored_filename == file_name),
+            )
+            .order_by(Document.created_at.asc())
+        )
+        document = self.db.execute(stmt).scalars().first()
+        if document is None:
+            raise AppError(f"Document not found for file_name: {file_name}", status.HTTP_404_NOT_FOUND)
+        return [str(document.id)]
 
     def _get_or_create_session(
         self,
