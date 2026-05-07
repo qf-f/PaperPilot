@@ -1,0 +1,43 @@
+# Fixed vs Heading Eval V2 Compare
+
+?? eval_v2 ????? result JSONL ?????????????????????? embedding?????? `eval/rag_eval_dataset_5papers_checked.jsonl` ? `paper004_q002` ? `paper004_q008` ? `expected_keyword_groups` ???
+
+## ????
+
+| ?? | fixed eval_v1 | fixed eval_v2 | heading eval_v1 | heading eval_v2 |
+|---|---:|---:|---:|---:|
+| total | 50 | 50 | 50 | 50 |
+| pass | 32 | 34 | 34 | 37 |
+| pass_rate | 0.64 | 0.68 | 0.68 | 0.74 |
+| relaxed_pass | 43 | 44 | 43 | 46 |
+| relaxed_pass_rate | 0.86 | 0.88 | 0.86 | 0.92 |
+| avg_keyword_hit_rate | 0.446 | 0.4546 | 0.427 | 0.457 |
+| retrieval_context_weak | 4 | 2 | 4 | 1 |
+| likely_eval_keyword_too_strict | 11 | 10 | 9 | 9 |
+| answer_keyword_mismatch | 3 | 4 | 3 | 3 |
+| no-answer strict pass | 8/10 | 10/10 | 9/10 | 10/10 |
+| no-answer relaxed pass | 10/10 | 10/10 | 9/10 | 10/10 |
+
+## ???????
+
+| case | ???? | ?? |
+|---|---|---|
+| paper004_q002 | ???????????????????????/???????????????? | heading eval_v2 strict ???fixed ? strict ???? relaxed ?? |
+| paper004_q008 | ?? image fusion community / conclusion / challenges / forecasting analysis / future work ????????????? | heading eval_v2 strict ???fixed ???? |
+
+## ?? Case ??
+
+| case | fixed v1 | fixed v2 | heading v1 | heading v2 | ?? |
+|---|---|---|---|---|---|
+| paper004_q002 | pass=False, reason=retrieval_context_weak | pass=False, reason=likely_eval_keyword_too_strict | pass=False, reason=retrieval_context_weak | pass=True, reason=None | retrieval debug ?? heading baseline ????????????? heading strict ??? |
+| paper004_q008 | pass=False, reason=retrieval_context_weak | pass=False, reason=answer_keyword_mismatch | pass=False, reason=retrieval_context_weak | pass=True, reason=None | heading rank1 ??? conclusion / challenges / forecasting analysis?????? heading strict ??? |
+| paper003_q007 | pass=False, reason=answer_keyword_mismatch | pass=False, reason=answer_keyword_mismatch | pass=False, reason=retrieval_context_weak | pass=False, reason=retrieval_context_weak | ???????heading ?? retrieval_context_weak???? top_k ????? |
+| paper004_q005 | pass=False, reason=retrieval_context_weak | pass=False, reason=retrieval_context_weak | pass=False, reason=likely_eval_keyword_too_strict | pass=False, reason=likely_eval_keyword_too_strict | ???????heading ? relaxed ??? strict ??????????????? |
+
+## ??
+
+- fixed eval_v2: 34/50, pass_rate=0.68?
+- heading eval_v2: 37/50, pass_rate=0.74?
+- heading ?? fixed ? eval_v2 ???? +3?
+- heading eval_v2 ?? retrieval_context_weak: paper003_q007?
+- ????????????????????? RAG ?????????

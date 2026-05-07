@@ -1,0 +1,2728 @@
+{
+  "title": "Retrieval Debug for Heading Eval V2",
+  "generated_at": "2026-05-07T14:33:56.895285+00:00",
+  "project_id": "1a636e72-447b-411d-9f44-a401d1e23d48",
+  "dataset_path": "eval\\rag_eval_dataset_5papers_checked.jsonl",
+  "result_path": "eval\\results\\heading_20260504\\rag_eval_result_heading_eval_v2.jsonl",
+  "documents_path": "eval\\rag_eval_documents.json",
+  "parameter_sets": [
+    {
+      "top_k": 6,
+      "similarity_threshold": 0.25
+    },
+    {
+      "top_k": 8,
+      "similarity_threshold": 0.25
+    },
+    {
+      "top_k": 10,
+      "similarity_threshold": 0.25
+    },
+    {
+      "top_k": 10,
+      "similarity_threshold": 0.2
+    },
+    {
+      "top_k": 12,
+      "similarity_threshold": 0.2
+    }
+  ],
+  "document_filter": true,
+  "cases": [
+    {
+      "case_id": "paper003_q007",
+      "paper_id": "paper003",
+      "paper_title": "基于RF-CNN-CBAM-BiLSTM的兴山民歌分类研究",
+      "question": "论文报告的主要实验结果是什么？",
+      "expected_keywords": [
+        "平均准确率",
+        "5.24%",
+        "运行时间",
+        "68.25 秒",
+        "分类性能",
+        "运行效率"
+      ],
+      "focus_keywords": [
+        "5.24%",
+        "68.25 秒",
+        "准确率",
+        "运行时间",
+        "平均准确率",
+        "基准模型"
+      ],
+      "fail_reason": "retrieval_context_weak",
+      "initial_assessment": "真实实验结果检索问题",
+      "target_document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+      "target_file_name": "aam_2624670.pdf",
+      "used_document_filter": true,
+      "runs": [
+        {
+          "params": {
+            "top_k": 6,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 6,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "准确率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "38aa6dfd-fb55-4c35-899a-43f84d04eaea",
+              "distance": 0.555177,
+              "similarity": 0.444823,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "中的结果。为公正且\n全面地评测该模型处理音频分类问题的效能，本文按照8:2 把数据集划分为训练集与测试集。其中，训练\n集包含1440 首歌曲，测试集包含360 首。\n3.1. 实验结果\n在兴山民歌识别研究中，本研究构建了RF-CNN-CBAM-BiLSTM 模型，以实现兴山民歌与其他类型\n民歌的二分类任务。模型训练后，得到混淆矩阵，如图6 所示。\n\nFigure 6. Confusion matrix of the RF-CNN-CBAM-BiLSTM classification model\n图6. RF-CNN-CBAM-BiLSTM 分类模型的混淆矩阵\n\n图中Actual 0 表示实际类别为兴山民歌的样本，Actual 1 表示实际类别为其他类型民歌的样本。Pre-\ndicted 0 表示预测类别为兴山民歌的样本，Predicted 1 表示预测类别为其他类型民歌的样本。整体准确率\n约为91.67%，这表明模型在整体上具备良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "215363b3-34eb-4a49-8775-39c1297b6fe5",
+              "distance": 0.56623,
+              "similarity": 0.43377,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2 中的指标来看，当以兴山民歌为正类时，精确率为92.44%，意味着模型预测为兴山民歌的样\n本中，实际确为兴山民歌的比例较高；召回率达90.34%，说明模型能有效捕捉到大部分实际的兴山民歌\n样本，对兴山民歌的覆盖较为全面。F1 值为91.38%，综合体现了精确率与召回率的平衡，显示模型在兴\n山民歌的判别上性能较为良好。特异度为92.93%，表明模型对其他类型民歌的正确识别能力也处于一定\n水平，有助于区分兴山民歌与其他类型民歌。\n\nTable 2. Precision, recall, F1-Score, and specificity of Xingshan folk song recognition\n表2. 兴山民歌识别的精确率，召回率，F1 值，特异度\n类别\n精确率\n召回率\nF1 值\n特异度\n兴山民歌\n92.44%\n90.34%\n91.38%\n-\n其他类型民歌\n90.96%\n92.93%\n91.94%\n92.93%\n\n总体而言，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "46954351-e8b6-468c-ab9f-041b947c845f",
+              "distance": 0.566441,
+              "similarity": 0.433559,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained via RF processing\n图4. 通过RF 处理得到的17 个特征的重要性得分\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n154\n应用数学进展\n\nRow0-Row12 是MFCC 的子特征，Row13 是短时平均振幅，Row14 是短时能量，Row15 是频谱质\n心，Row16 为频谱带宽。根据图中显示的结果，Row8 以后的特征重要性得分低于0.0001，故取前12 个\n特征，进行后续的分类，这12 个特征中，有75%的特征属于梅尔谱频谱特征，这是因为梅尔谱频特征共\n13 维，占所有特征的76.4%，能够提供丰富的频域信息与时域变化，且涵盖声音特性信息。\n2.3. CNN-CBAM-BiLSTM 模型\nCBAM 是一种用于增强卷积神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "80b637f5-6871-462c-a784-8a5eb4a233f1",
+              "distance": 0.573844,
+              "similarity": 0.426156,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，提炼关键信息，让数据契合后续分析需求。针对长时音频数据，通常采\n用分帧处理与窗函数应用(如汉宁窗)实现信号的平稳化。特征提取环节则从预处理后的数据中提取多维\n度特征参数，涵盖时域(如过零率，短时能量)，频域(如频谱质心，带宽)及倒谱域(如梅尔频率倒谱系数，\nMFCC)等方面特征。特征处理旨在对提取的全部特征进行归一化操作，同时筛选出关键特征。音频分类\n基本流程如图2 所示。\n\nFigure 2. Basic workflow of audio classification\n图2. 音频分类基本流程\n\n本研究收集，整理的数据集涵盖了兴山民歌与其他九种类型民歌。其中，其他类型民歌包含劳动号\n子，搬运号子，渔船号子，灯歌，小调，舞歌，田歌，儿歌以及生活音调这九种不同音乐流派，总计1800\n首音频数据作为实验样本。各音频类型及其对应的数量详情如表1 所示。\n\nTable 1. Audio types and quantities\n表1.",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "350d5ff9-4657-4f6a-bcd5-1cda05c46c94",
+              "distance": 0.575566,
+              "similarity": 0.424434,
+              "page_number": 1,
+              "section_title": "关键词",
+              "section_path": [
+                "关键词"
+              ],
+              "is_reference_section": false,
+              "content_preview": "[Section: 关键词]\n音频分类，注意力机制，深度学习\n\nA Study on the Classification of Xingshan\nFolk Songs Using RF-CNN-CBAM-BiLSTM\nYuxin Bai1, Yilin Liu1, Mengfei Lei2, Weiwei Xiao1*\n1College of Science, North China University of Technology, Beijing\n2Tengfei School of Haidian Foreign Language Academy, Beijing\n\nReceived: Jul. 12th, 2025; accepted: Aug. 5th, 2025; published: Aug. 14th, 2025\n\n*通讯作者。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n148\n应用数学进展",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "71870498-43a4-4e84-bbaa-388d9035dc2a",
+              "distance": 0.579937,
+              "similarity": 0.420063,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "：\n\n( )\n( )\n( )\n1\n0\n,\n0,1,\n,\n1\nN\ni\ni\nm\nk\nS\nm\nX\nk H\nk\nm\nM\n−\n=\n=\n=\n−\n∑\n\n\n(9)\n对数运算与离散余弦变换(DCT)对梅尔频谱\n( )\niS m 取对数，得到对数梅尔频谱\n( )\n(\n)\nlog\niS\nm\n。这一步是\n为了模拟人类听觉系统对声音强度的对数响应。然后对对数梅尔频谱进行离散余弦变换(DCT)，得到\nMFCC 系数\n( )\nic n ：\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n153\n应用数学进展\n\n( )\n( )\n(\n)\n1\n0\n2\n1\nlog\ncos\n,\n0,1,\n,\n1\n2\nM\ni\ni\nm\nn\nc n\nS\nm\nm\nn\nL\nM\nM\n−\n=\n\n\n\n\n=\n+\n=\n−\n\n\n\n\n\n\n\n\nπ\n∑\n\n\n(10)\n其中，L 是所取的MFCC 的数量，在本研究中取前13 个系数作为特征。\n综上所述，从时域、频域和倒谱域三个方面对预处理后的每帧信号提取特征，时域提取2 个能反映\n信号时间变化特性的特征，频域提取2 个展示频率组成情况的特征，倒谱域提取13 个有助",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 8,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 8,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行时间",
+              "分类性能",
+              "运行效率"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 7
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "准确率",
+              "运行时间"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "38aa6dfd-fb55-4c35-899a-43f84d04eaea",
+              "distance": 0.555177,
+              "similarity": 0.444823,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "中的结果。为公正且\n全面地评测该模型处理音频分类问题的效能，本文按照8:2 把数据集划分为训练集与测试集。其中，训练\n集包含1440 首歌曲，测试集包含360 首。\n3.1. 实验结果\n在兴山民歌识别研究中，本研究构建了RF-CNN-CBAM-BiLSTM 模型，以实现兴山民歌与其他类型\n民歌的二分类任务。模型训练后，得到混淆矩阵，如图6 所示。\n\nFigure 6. Confusion matrix of the RF-CNN-CBAM-BiLSTM classification model\n图6. RF-CNN-CBAM-BiLSTM 分类模型的混淆矩阵\n\n图中Actual 0 表示实际类别为兴山民歌的样本，Actual 1 表示实际类别为其他类型民歌的样本。Pre-\ndicted 0 表示预测类别为兴山民歌的样本，Predicted 1 表示预测类别为其他类型民歌的样本。整体准确率\n约为91.67%，这表明模型在整体上具备良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "215363b3-34eb-4a49-8775-39c1297b6fe5",
+              "distance": 0.56623,
+              "similarity": 0.43377,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2 中的指标来看，当以兴山民歌为正类时，精确率为92.44%，意味着模型预测为兴山民歌的样\n本中，实际确为兴山民歌的比例较高；召回率达90.34%，说明模型能有效捕捉到大部分实际的兴山民歌\n样本，对兴山民歌的覆盖较为全面。F1 值为91.38%，综合体现了精确率与召回率的平衡，显示模型在兴\n山民歌的判别上性能较为良好。特异度为92.93%，表明模型对其他类型民歌的正确识别能力也处于一定\n水平，有助于区分兴山民歌与其他类型民歌。\n\nTable 2. Precision, recall, F1-Score, and specificity of Xingshan folk song recognition\n表2. 兴山民歌识别的精确率，召回率，F1 值，特异度\n类别\n精确率\n召回率\nF1 值\n特异度\n兴山民歌\n92.44%\n90.34%\n91.38%\n-\n其他类型民歌\n90.96%\n92.93%\n91.94%\n92.93%\n\n总体而言，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "46954351-e8b6-468c-ab9f-041b947c845f",
+              "distance": 0.566441,
+              "similarity": 0.433559,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained via RF processing\n图4. 通过RF 处理得到的17 个特征的重要性得分\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n154\n应用数学进展\n\nRow0-Row12 是MFCC 的子特征，Row13 是短时平均振幅，Row14 是短时能量，Row15 是频谱质\n心，Row16 为频谱带宽。根据图中显示的结果，Row8 以后的特征重要性得分低于0.0001，故取前12 个\n特征，进行后续的分类，这12 个特征中，有75%的特征属于梅尔谱频谱特征，这是因为梅尔谱频特征共\n13 维，占所有特征的76.4%，能够提供丰富的频域信息与时域变化，且涵盖声音特性信息。\n2.3. CNN-CBAM-BiLSTM 模型\nCBAM 是一种用于增强卷积神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "80b637f5-6871-462c-a784-8a5eb4a233f1",
+              "distance": 0.573844,
+              "similarity": 0.426156,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，提炼关键信息，让数据契合后续分析需求。针对长时音频数据，通常采\n用分帧处理与窗函数应用(如汉宁窗)实现信号的平稳化。特征提取环节则从预处理后的数据中提取多维\n度特征参数，涵盖时域(如过零率，短时能量)，频域(如频谱质心，带宽)及倒谱域(如梅尔频率倒谱系数，\nMFCC)等方面特征。特征处理旨在对提取的全部特征进行归一化操作，同时筛选出关键特征。音频分类\n基本流程如图2 所示。\n\nFigure 2. Basic workflow of audio classification\n图2. 音频分类基本流程\n\n本研究收集，整理的数据集涵盖了兴山民歌与其他九种类型民歌。其中，其他类型民歌包含劳动号\n子，搬运号子，渔船号子，灯歌，小调，舞歌，田歌，儿歌以及生活音调这九种不同音乐流派，总计1800\n首音频数据作为实验样本。各音频类型及其对应的数量详情如表1 所示。\n\nTable 1. Audio types and quantities\n表1.",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "350d5ff9-4657-4f6a-bcd5-1cda05c46c94",
+              "distance": 0.575566,
+              "similarity": 0.424434,
+              "page_number": 1,
+              "section_title": "关键词",
+              "section_path": [
+                "关键词"
+              ],
+              "is_reference_section": false,
+              "content_preview": "[Section: 关键词]\n音频分类，注意力机制，深度学习\n\nA Study on the Classification of Xingshan\nFolk Songs Using RF-CNN-CBAM-BiLSTM\nYuxin Bai1, Yilin Liu1, Mengfei Lei2, Weiwei Xiao1*\n1College of Science, North China University of Technology, Beijing\n2Tengfei School of Haidian Foreign Language Academy, Beijing\n\nReceived: Jul. 12th, 2025; accepted: Aug. 5th, 2025; published: Aug. 14th, 2025\n\n*通讯作者。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n148\n应用数学进展",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "71870498-43a4-4e84-bbaa-388d9035dc2a",
+              "distance": 0.579937,
+              "similarity": 0.420063,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "：\n\n( )\n( )\n( )\n1\n0\n,\n0,1,\n,\n1\nN\ni\ni\nm\nk\nS\nm\nX\nk H\nk\nm\nM\n−\n=\n=\n=\n−\n∑\n\n\n(9)\n对数运算与离散余弦变换(DCT)对梅尔频谱\n( )\niS m 取对数，得到对数梅尔频谱\n( )\n(\n)\nlog\niS\nm\n。这一步是\n为了模拟人类听觉系统对声音强度的对数响应。然后对对数梅尔频谱进行离散余弦变换(DCT)，得到\nMFCC 系数\n( )\nic n ：\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n153\n应用数学进展\n\n( )\n( )\n(\n)\n1\n0\n2\n1\nlog\ncos\n,\n0,1,\n,\n1\n2\nM\ni\ni\nm\nn\nc n\nS\nm\nm\nn\nL\nM\nM\n−\n=\n\n\n\n\n=\n+\n=\n−\n\n\n\n\n\n\n\n\nπ\n∑\n\n\n(10)\n其中，L 是所取的MFCC 的数量，在本研究中取前13 个系数作为特征。\n综上所述，从时域、频域和倒谱域三个方面对预处理后的每帧信号提取特征，时域提取2 个能反映\n信号时间变化特性的特征，频域提取2 个展示频率组成情况的特征，倒谱域提取13 个有助",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "5ede823a-1c05-469d-8e72-b6246a846bf4",
+              "distance": 0.582419,
+              "similarity": 0.417581,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "tV1、BiLSTM、LSTM 五个神经网络模型进行对比实验，给出所有模型的分类准确率和每一轮\n运行时间。在兴山民歌识别任务中，本文提出的RF-CNN-CBAM-BiLSTM 模型在分类性能与计算效率上\n均展现出显著优势。如图9 所示，该模型以91.67%的准确率超越所有对比模型，较未利用RF 降维的\nCNN-CBAM-BiLSTM 模型的准确率89.97%，提升1.7%，较ResNet50 的准确率87.36%，提升4.31%。\n这一性能提升得益于特征降维与模型架构的协同优化：通过随机森林(RF)对原始17 * 250 维特征进行筛\n选，保留12 * 250 维高区分性特征，剔除冗余信息，使模型更聚焦于关键声学模式；同时，CNN-CBAM\n模块通过通道与空间注意力机制强化局部特征提取能力，BiLSTM 捕捉音频序列的长期依赖关系，二者\n结合有效弥补降维带来的信息损失，确保模型在低维特征空间中仍能精准建模兴山民歌的独特性。\n在运行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间",
+                "分类性能",
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 8,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "917f63ce-2273-460b-9de9-9f84b089f06f",
+              "distance": 0.585616,
+              "similarity": 0.414384,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每一轮运行时间27 秒，缩短18.5%，且\n显著优于参数量庞大的ResNet50 模型的每一轮运行时间257 秒与EfficientNetV1 模型的每一轮运行时间\n51 秒。效率提升的核心在于特征降维对计算复杂度的优化：输入特征维度从17 * 250 压缩至12 * 250 (减\n少29.4%)。尽管BiLSTM 模型的每一轮运行时间(18 秒)与LSTM 模型的每一轮运行时间(15 秒)耗时更\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n158\n应用数学进展\n\n短，但其准确率较本文模型存在显著差距5.34%~6.47%，表明单一模块模型难以兼顾效率与精度，而本\n文模型通过多模块融合实现了二者均衡。\n\nFigure 9. Comparison of accuracy of classification models\n图9. 分类模型的准确率对比\n\nFigure 10. Comparison of",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间"
+              ]
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行时间",
+              "分类性能",
+              "运行效率"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 7
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "准确率",
+              "运行时间",
+              "基准模型"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "38aa6dfd-fb55-4c35-899a-43f84d04eaea",
+              "distance": 0.555177,
+              "similarity": 0.444823,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "中的结果。为公正且\n全面地评测该模型处理音频分类问题的效能，本文按照8:2 把数据集划分为训练集与测试集。其中，训练\n集包含1440 首歌曲，测试集包含360 首。\n3.1. 实验结果\n在兴山民歌识别研究中，本研究构建了RF-CNN-CBAM-BiLSTM 模型，以实现兴山民歌与其他类型\n民歌的二分类任务。模型训练后，得到混淆矩阵，如图6 所示。\n\nFigure 6. Confusion matrix of the RF-CNN-CBAM-BiLSTM classification model\n图6. RF-CNN-CBAM-BiLSTM 分类模型的混淆矩阵\n\n图中Actual 0 表示实际类别为兴山民歌的样本，Actual 1 表示实际类别为其他类型民歌的样本。Pre-\ndicted 0 表示预测类别为兴山民歌的样本，Predicted 1 表示预测类别为其他类型民歌的样本。整体准确率\n约为91.67%，这表明模型在整体上具备良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "215363b3-34eb-4a49-8775-39c1297b6fe5",
+              "distance": 0.56623,
+              "similarity": 0.43377,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2 中的指标来看，当以兴山民歌为正类时，精确率为92.44%，意味着模型预测为兴山民歌的样\n本中，实际确为兴山民歌的比例较高；召回率达90.34%，说明模型能有效捕捉到大部分实际的兴山民歌\n样本，对兴山民歌的覆盖较为全面。F1 值为91.38%，综合体现了精确率与召回率的平衡，显示模型在兴\n山民歌的判别上性能较为良好。特异度为92.93%，表明模型对其他类型民歌的正确识别能力也处于一定\n水平，有助于区分兴山民歌与其他类型民歌。\n\nTable 2. Precision, recall, F1-Score, and specificity of Xingshan folk song recognition\n表2. 兴山民歌识别的精确率，召回率，F1 值，特异度\n类别\n精确率\n召回率\nF1 值\n特异度\n兴山民歌\n92.44%\n90.34%\n91.38%\n-\n其他类型民歌\n90.96%\n92.93%\n91.94%\n92.93%\n\n总体而言，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "46954351-e8b6-468c-ab9f-041b947c845f",
+              "distance": 0.566441,
+              "similarity": 0.433559,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained via RF processing\n图4. 通过RF 处理得到的17 个特征的重要性得分\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n154\n应用数学进展\n\nRow0-Row12 是MFCC 的子特征，Row13 是短时平均振幅，Row14 是短时能量，Row15 是频谱质\n心，Row16 为频谱带宽。根据图中显示的结果，Row8 以后的特征重要性得分低于0.0001，故取前12 个\n特征，进行后续的分类，这12 个特征中，有75%的特征属于梅尔谱频谱特征，这是因为梅尔谱频特征共\n13 维，占所有特征的76.4%，能够提供丰富的频域信息与时域变化，且涵盖声音特性信息。\n2.3. CNN-CBAM-BiLSTM 模型\nCBAM 是一种用于增强卷积神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "80b637f5-6871-462c-a784-8a5eb4a233f1",
+              "distance": 0.573844,
+              "similarity": 0.426156,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，提炼关键信息，让数据契合后续分析需求。针对长时音频数据，通常采\n用分帧处理与窗函数应用(如汉宁窗)实现信号的平稳化。特征提取环节则从预处理后的数据中提取多维\n度特征参数，涵盖时域(如过零率，短时能量)，频域(如频谱质心，带宽)及倒谱域(如梅尔频率倒谱系数，\nMFCC)等方面特征。特征处理旨在对提取的全部特征进行归一化操作，同时筛选出关键特征。音频分类\n基本流程如图2 所示。\n\nFigure 2. Basic workflow of audio classification\n图2. 音频分类基本流程\n\n本研究收集，整理的数据集涵盖了兴山民歌与其他九种类型民歌。其中，其他类型民歌包含劳动号\n子，搬运号子，渔船号子，灯歌，小调，舞歌，田歌，儿歌以及生活音调这九种不同音乐流派，总计1800\n首音频数据作为实验样本。各音频类型及其对应的数量详情如表1 所示。\n\nTable 1. Audio types and quantities\n表1.",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "350d5ff9-4657-4f6a-bcd5-1cda05c46c94",
+              "distance": 0.575566,
+              "similarity": 0.424434,
+              "page_number": 1,
+              "section_title": "关键词",
+              "section_path": [
+                "关键词"
+              ],
+              "is_reference_section": false,
+              "content_preview": "[Section: 关键词]\n音频分类，注意力机制，深度学习\n\nA Study on the Classification of Xingshan\nFolk Songs Using RF-CNN-CBAM-BiLSTM\nYuxin Bai1, Yilin Liu1, Mengfei Lei2, Weiwei Xiao1*\n1College of Science, North China University of Technology, Beijing\n2Tengfei School of Haidian Foreign Language Academy, Beijing\n\nReceived: Jul. 12th, 2025; accepted: Aug. 5th, 2025; published: Aug. 14th, 2025\n\n*通讯作者。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n148\n应用数学进展",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "71870498-43a4-4e84-bbaa-388d9035dc2a",
+              "distance": 0.579937,
+              "similarity": 0.420063,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "：\n\n( )\n( )\n( )\n1\n0\n,\n0,1,\n,\n1\nN\ni\ni\nm\nk\nS\nm\nX\nk H\nk\nm\nM\n−\n=\n=\n=\n−\n∑\n\n\n(9)\n对数运算与离散余弦变换(DCT)对梅尔频谱\n( )\niS m 取对数，得到对数梅尔频谱\n( )\n(\n)\nlog\niS\nm\n。这一步是\n为了模拟人类听觉系统对声音强度的对数响应。然后对对数梅尔频谱进行离散余弦变换(DCT)，得到\nMFCC 系数\n( )\nic n ：\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n153\n应用数学进展\n\n( )\n( )\n(\n)\n1\n0\n2\n1\nlog\ncos\n,\n0,1,\n,\n1\n2\nM\ni\ni\nm\nn\nc n\nS\nm\nm\nn\nL\nM\nM\n−\n=\n\n\n\n\n=\n+\n=\n−\n\n\n\n\n\n\n\n\nπ\n∑\n\n\n(10)\n其中，L 是所取的MFCC 的数量，在本研究中取前13 个系数作为特征。\n综上所述，从时域、频域和倒谱域三个方面对预处理后的每帧信号提取特征，时域提取2 个能反映\n信号时间变化特性的特征，频域提取2 个展示频率组成情况的特征，倒谱域提取13 个有助",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "5ede823a-1c05-469d-8e72-b6246a846bf4",
+              "distance": 0.582419,
+              "similarity": 0.417581,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "tV1、BiLSTM、LSTM 五个神经网络模型进行对比实验，给出所有模型的分类准确率和每一轮\n运行时间。在兴山民歌识别任务中，本文提出的RF-CNN-CBAM-BiLSTM 模型在分类性能与计算效率上\n均展现出显著优势。如图9 所示，该模型以91.67%的准确率超越所有对比模型，较未利用RF 降维的\nCNN-CBAM-BiLSTM 模型的准确率89.97%，提升1.7%，较ResNet50 的准确率87.36%，提升4.31%。\n这一性能提升得益于特征降维与模型架构的协同优化：通过随机森林(RF)对原始17 * 250 维特征进行筛\n选，保留12 * 250 维高区分性特征，剔除冗余信息，使模型更聚焦于关键声学模式；同时，CNN-CBAM\n模块通过通道与空间注意力机制强化局部特征提取能力，BiLSTM 捕捉音频序列的长期依赖关系，二者\n结合有效弥补降维带来的信息损失，确保模型在低维特征空间中仍能精准建模兴山民歌的独特性。\n在运行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间",
+                "分类性能",
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 8,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "917f63ce-2273-460b-9de9-9f84b089f06f",
+              "distance": 0.585616,
+              "similarity": 0.414384,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每一轮运行时间27 秒，缩短18.5%，且\n显著优于参数量庞大的ResNet50 模型的每一轮运行时间257 秒与EfficientNetV1 模型的每一轮运行时间\n51 秒。效率提升的核心在于特征降维对计算复杂度的优化：输入特征维度从17 * 250 压缩至12 * 250 (减\n少29.4%)。尽管BiLSTM 模型的每一轮运行时间(18 秒)与LSTM 模型的每一轮运行时间(15 秒)耗时更\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n158\n应用数学进展\n\n短，但其准确率较本文模型存在显著差距5.34%~6.47%，表明单一模块模型难以兼顾效率与精度，而本\n文模型通过多模块融合实现了二者均衡。\n\nFigure 9. Comparison of accuracy of classification models\n图9. 分类模型的准确率对比\n\nFigure 10. Comparison of",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间"
+              ]
+            },
+            {
+              "rank": 9,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "479adbed-51ba-4051-b6d1-f690ac94ac47",
+              "distance": 0.592093,
+              "similarity": 0.407907,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "识别算法，解决已有技术的\n局限性，构建了包含1800 首民歌样本的音频数据集，并详细阐述了音频预处理流程，特征提取方法以及\n针对BiLSTM 音频分类模型提出的改进模型RF-CNN-CBAM-BiLSTM。最后，介绍了音频识别的实验结\n果，实验部分通过准确率，F1 分数等5 项指标，对改进模型的性能进行了量化评估，并与多种基准模型\n(如ResNet50, EfficientNetV1 等)开展了兴山民歌识别效果的对比分析。\n2. RF-CNN-CBAM-BiLSTM 算法流程\n图1 为RF-CNN-CBAM-BiLSTM 分类模型流程图。\n\nFigure 1. Flowchart of the RF-CNN-CBAM-BiLSTM classification model\n图1. 基于RF-CNN-CBAM-BiLSTM 分类模型流程图\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n150\n应用数学进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "b7ad556b-d2c2-45b3-a576-d79cb821baf4",
+              "distance": 0.594412,
+              "similarity": 0.405588,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加网络复杂度来实\n现。该模块包含通道注意力模块(C-channel)与空间注意力模块(S-channel)两大核心组件。这两个模块能够\n分别嵌入CNN 的不同层级，以此强化特征表达能力，助力模型更好地捕捉关键信息。\n\nFigure 5. CBAM hybrid attention module\n图5. CBAM 混合注意力模块\n\n在兴山民歌的识别领域，存在多重技术瓶颈。一方面，兴山民歌音频样本普遍存在模糊、嘈杂的特\n性，这使得传统模型在识别过程中遭遇严重阻碍，有效特征易被噪声干扰和掩盖，导致识别准确率较低。\n另一方面，在构建模型的过程中，未能充分关注音频数据在时间维度上的前后关联性，无法满足对兴山\n民歌深入研究与保护的需求。尤为关键的是，截至目前，尚未有针对兴山民歌在信号处理方面的专门研\n究，这无疑加剧了兴山民歌音频处理工作的难度。\n鉴于此，本研究创新性地提出了一种融合注意力机制的卷积和双向长短期记忆网络。兴山民歌音频\n在时间序列",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行时间",
+              "分类性能",
+              "运行效率"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 7
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "准确率",
+              "运行时间",
+              "基准模型"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "38aa6dfd-fb55-4c35-899a-43f84d04eaea",
+              "distance": 0.555177,
+              "similarity": 0.444823,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "中的结果。为公正且\n全面地评测该模型处理音频分类问题的效能，本文按照8:2 把数据集划分为训练集与测试集。其中，训练\n集包含1440 首歌曲，测试集包含360 首。\n3.1. 实验结果\n在兴山民歌识别研究中，本研究构建了RF-CNN-CBAM-BiLSTM 模型，以实现兴山民歌与其他类型\n民歌的二分类任务。模型训练后，得到混淆矩阵，如图6 所示。\n\nFigure 6. Confusion matrix of the RF-CNN-CBAM-BiLSTM classification model\n图6. RF-CNN-CBAM-BiLSTM 分类模型的混淆矩阵\n\n图中Actual 0 表示实际类别为兴山民歌的样本，Actual 1 表示实际类别为其他类型民歌的样本。Pre-\ndicted 0 表示预测类别为兴山民歌的样本，Predicted 1 表示预测类别为其他类型民歌的样本。整体准确率\n约为91.67%，这表明模型在整体上具备良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "215363b3-34eb-4a49-8775-39c1297b6fe5",
+              "distance": 0.56623,
+              "similarity": 0.43377,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2 中的指标来看，当以兴山民歌为正类时，精确率为92.44%，意味着模型预测为兴山民歌的样\n本中，实际确为兴山民歌的比例较高；召回率达90.34%，说明模型能有效捕捉到大部分实际的兴山民歌\n样本，对兴山民歌的覆盖较为全面。F1 值为91.38%，综合体现了精确率与召回率的平衡，显示模型在兴\n山民歌的判别上性能较为良好。特异度为92.93%，表明模型对其他类型民歌的正确识别能力也处于一定\n水平，有助于区分兴山民歌与其他类型民歌。\n\nTable 2. Precision, recall, F1-Score, and specificity of Xingshan folk song recognition\n表2. 兴山民歌识别的精确率，召回率，F1 值，特异度\n类别\n精确率\n召回率\nF1 值\n特异度\n兴山民歌\n92.44%\n90.34%\n91.38%\n-\n其他类型民歌\n90.96%\n92.93%\n91.94%\n92.93%\n\n总体而言，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "46954351-e8b6-468c-ab9f-041b947c845f",
+              "distance": 0.566441,
+              "similarity": 0.433559,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained via RF processing\n图4. 通过RF 处理得到的17 个特征的重要性得分\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n154\n应用数学进展\n\nRow0-Row12 是MFCC 的子特征，Row13 是短时平均振幅，Row14 是短时能量，Row15 是频谱质\n心，Row16 为频谱带宽。根据图中显示的结果，Row8 以后的特征重要性得分低于0.0001，故取前12 个\n特征，进行后续的分类，这12 个特征中，有75%的特征属于梅尔谱频谱特征，这是因为梅尔谱频特征共\n13 维，占所有特征的76.4%，能够提供丰富的频域信息与时域变化，且涵盖声音特性信息。\n2.3. CNN-CBAM-BiLSTM 模型\nCBAM 是一种用于增强卷积神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "80b637f5-6871-462c-a784-8a5eb4a233f1",
+              "distance": 0.573844,
+              "similarity": 0.426156,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，提炼关键信息，让数据契合后续分析需求。针对长时音频数据，通常采\n用分帧处理与窗函数应用(如汉宁窗)实现信号的平稳化。特征提取环节则从预处理后的数据中提取多维\n度特征参数，涵盖时域(如过零率，短时能量)，频域(如频谱质心，带宽)及倒谱域(如梅尔频率倒谱系数，\nMFCC)等方面特征。特征处理旨在对提取的全部特征进行归一化操作，同时筛选出关键特征。音频分类\n基本流程如图2 所示。\n\nFigure 2. Basic workflow of audio classification\n图2. 音频分类基本流程\n\n本研究收集，整理的数据集涵盖了兴山民歌与其他九种类型民歌。其中，其他类型民歌包含劳动号\n子，搬运号子，渔船号子，灯歌，小调，舞歌，田歌，儿歌以及生活音调这九种不同音乐流派，总计1800\n首音频数据作为实验样本。各音频类型及其对应的数量详情如表1 所示。\n\nTable 1. Audio types and quantities\n表1.",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "350d5ff9-4657-4f6a-bcd5-1cda05c46c94",
+              "distance": 0.575566,
+              "similarity": 0.424434,
+              "page_number": 1,
+              "section_title": "关键词",
+              "section_path": [
+                "关键词"
+              ],
+              "is_reference_section": false,
+              "content_preview": "[Section: 关键词]\n音频分类，注意力机制，深度学习\n\nA Study on the Classification of Xingshan\nFolk Songs Using RF-CNN-CBAM-BiLSTM\nYuxin Bai1, Yilin Liu1, Mengfei Lei2, Weiwei Xiao1*\n1College of Science, North China University of Technology, Beijing\n2Tengfei School of Haidian Foreign Language Academy, Beijing\n\nReceived: Jul. 12th, 2025; accepted: Aug. 5th, 2025; published: Aug. 14th, 2025\n\n*通讯作者。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n148\n应用数学进展",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "71870498-43a4-4e84-bbaa-388d9035dc2a",
+              "distance": 0.579937,
+              "similarity": 0.420063,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "：\n\n( )\n( )\n( )\n1\n0\n,\n0,1,\n,\n1\nN\ni\ni\nm\nk\nS\nm\nX\nk H\nk\nm\nM\n−\n=\n=\n=\n−\n∑\n\n\n(9)\n对数运算与离散余弦变换(DCT)对梅尔频谱\n( )\niS m 取对数，得到对数梅尔频谱\n( )\n(\n)\nlog\niS\nm\n。这一步是\n为了模拟人类听觉系统对声音强度的对数响应。然后对对数梅尔频谱进行离散余弦变换(DCT)，得到\nMFCC 系数\n( )\nic n ：\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n153\n应用数学进展\n\n( )\n( )\n(\n)\n1\n0\n2\n1\nlog\ncos\n,\n0,1,\n,\n1\n2\nM\ni\ni\nm\nn\nc n\nS\nm\nm\nn\nL\nM\nM\n−\n=\n\n\n\n\n=\n+\n=\n−\n\n\n\n\n\n\n\n\nπ\n∑\n\n\n(10)\n其中，L 是所取的MFCC 的数量，在本研究中取前13 个系数作为特征。\n综上所述，从时域、频域和倒谱域三个方面对预处理后的每帧信号提取特征，时域提取2 个能反映\n信号时间变化特性的特征，频域提取2 个展示频率组成情况的特征，倒谱域提取13 个有助",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "5ede823a-1c05-469d-8e72-b6246a846bf4",
+              "distance": 0.582419,
+              "similarity": 0.417581,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "tV1、BiLSTM、LSTM 五个神经网络模型进行对比实验，给出所有模型的分类准确率和每一轮\n运行时间。在兴山民歌识别任务中，本文提出的RF-CNN-CBAM-BiLSTM 模型在分类性能与计算效率上\n均展现出显著优势。如图9 所示，该模型以91.67%的准确率超越所有对比模型，较未利用RF 降维的\nCNN-CBAM-BiLSTM 模型的准确率89.97%，提升1.7%，较ResNet50 的准确率87.36%，提升4.31%。\n这一性能提升得益于特征降维与模型架构的协同优化：通过随机森林(RF)对原始17 * 250 维特征进行筛\n选，保留12 * 250 维高区分性特征，剔除冗余信息，使模型更聚焦于关键声学模式；同时，CNN-CBAM\n模块通过通道与空间注意力机制强化局部特征提取能力，BiLSTM 捕捉音频序列的长期依赖关系，二者\n结合有效弥补降维带来的信息损失，确保模型在低维特征空间中仍能精准建模兴山民歌的独特性。\n在运行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间",
+                "分类性能",
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 8,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "917f63ce-2273-460b-9de9-9f84b089f06f",
+              "distance": 0.585616,
+              "similarity": 0.414384,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每一轮运行时间27 秒，缩短18.5%，且\n显著优于参数量庞大的ResNet50 模型的每一轮运行时间257 秒与EfficientNetV1 模型的每一轮运行时间\n51 秒。效率提升的核心在于特征降维对计算复杂度的优化：输入特征维度从17 * 250 压缩至12 * 250 (减\n少29.4%)。尽管BiLSTM 模型的每一轮运行时间(18 秒)与LSTM 模型的每一轮运行时间(15 秒)耗时更\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n158\n应用数学进展\n\n短，但其准确率较本文模型存在显著差距5.34%~6.47%，表明单一模块模型难以兼顾效率与精度，而本\n文模型通过多模块融合实现了二者均衡。\n\nFigure 9. Comparison of accuracy of classification models\n图9. 分类模型的准确率对比\n\nFigure 10. Comparison of",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间"
+              ]
+            },
+            {
+              "rank": 9,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "479adbed-51ba-4051-b6d1-f690ac94ac47",
+              "distance": 0.592093,
+              "similarity": 0.407907,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "识别算法，解决已有技术的\n局限性，构建了包含1800 首民歌样本的音频数据集，并详细阐述了音频预处理流程，特征提取方法以及\n针对BiLSTM 音频分类模型提出的改进模型RF-CNN-CBAM-BiLSTM。最后，介绍了音频识别的实验结\n果，实验部分通过准确率，F1 分数等5 项指标，对改进模型的性能进行了量化评估，并与多种基准模型\n(如ResNet50, EfficientNetV1 等)开展了兴山民歌识别效果的对比分析。\n2. RF-CNN-CBAM-BiLSTM 算法流程\n图1 为RF-CNN-CBAM-BiLSTM 分类模型流程图。\n\nFigure 1. Flowchart of the RF-CNN-CBAM-BiLSTM classification model\n图1. 基于RF-CNN-CBAM-BiLSTM 分类模型流程图\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n150\n应用数学进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "b7ad556b-d2c2-45b3-a576-d79cb821baf4",
+              "distance": 0.594412,
+              "similarity": 0.405588,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加网络复杂度来实\n现。该模块包含通道注意力模块(C-channel)与空间注意力模块(S-channel)两大核心组件。这两个模块能够\n分别嵌入CNN 的不同层级，以此强化特征表达能力，助力模型更好地捕捉关键信息。\n\nFigure 5. CBAM hybrid attention module\n图5. CBAM 混合注意力模块\n\n在兴山民歌的识别领域，存在多重技术瓶颈。一方面，兴山民歌音频样本普遍存在模糊、嘈杂的特\n性，这使得传统模型在识别过程中遭遇严重阻碍，有效特征易被噪声干扰和掩盖，导致识别准确率较低。\n另一方面，在构建模型的过程中，未能充分关注音频数据在时间维度上的前后关联性，无法满足对兴山\n民歌深入研究与保护的需求。尤为关键的是，截至目前，尚未有针对兴山民歌在信号处理方面的专门研\n究，这无疑加剧了兴山民歌音频处理工作的难度。\n鉴于此，本研究创新性地提出了一种融合注意力机制的卷积和双向长短期记忆网络。兴山民歌音频\n在时间序列",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 12,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 12,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行时间",
+              "分类性能",
+              "运行效率"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 7
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "准确率",
+              "运行时间",
+              "基准模型"
+            ],
+            "hit_count": 3,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "38aa6dfd-fb55-4c35-899a-43f84d04eaea",
+              "distance": 0.555177,
+              "similarity": 0.444823,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "中的结果。为公正且\n全面地评测该模型处理音频分类问题的效能，本文按照8:2 把数据集划分为训练集与测试集。其中，训练\n集包含1440 首歌曲，测试集包含360 首。\n3.1. 实验结果\n在兴山民歌识别研究中，本研究构建了RF-CNN-CBAM-BiLSTM 模型，以实现兴山民歌与其他类型\n民歌的二分类任务。模型训练后，得到混淆矩阵，如图6 所示。\n\nFigure 6. Confusion matrix of the RF-CNN-CBAM-BiLSTM classification model\n图6. RF-CNN-CBAM-BiLSTM 分类模型的混淆矩阵\n\n图中Actual 0 表示实际类别为兴山民歌的样本，Actual 1 表示实际类别为其他类型民歌的样本。Pre-\ndicted 0 表示预测类别为兴山民歌的样本，Predicted 1 表示预测类别为其他类型民歌的样本。整体准确率\n约为91.67%，这表明模型在整体上具备良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "215363b3-34eb-4a49-8775-39c1297b6fe5",
+              "distance": 0.56623,
+              "similarity": 0.43377,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "良好的识别能力，能够对大部分音频样本进行正确分类。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n156\n应用数学进展\n\n从表2 中的指标来看，当以兴山民歌为正类时，精确率为92.44%，意味着模型预测为兴山民歌的样\n本中，实际确为兴山民歌的比例较高；召回率达90.34%，说明模型能有效捕捉到大部分实际的兴山民歌\n样本，对兴山民歌的覆盖较为全面。F1 值为91.38%，综合体现了精确率与召回率的平衡，显示模型在兴\n山民歌的判别上性能较为良好。特异度为92.93%，表明模型对其他类型民歌的正确识别能力也处于一定\n水平，有助于区分兴山民歌与其他类型民歌。\n\nTable 2. Precision, recall, F1-Score, and specificity of Xingshan folk song recognition\n表2. 兴山民歌识别的精确率，召回率，F1 值，特异度\n类别\n精确率\n召回率\nF1 值\n特异度\n兴山民歌\n92.44%\n90.34%\n91.38%\n-\n其他类型民歌\n90.96%\n92.93%\n91.94%\n92.93%\n\n总体而言，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "46954351-e8b6-468c-ab9f-041b947c845f",
+              "distance": 0.566441,
+              "similarity": 0.433559,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained via RF processing\n图4. 通过RF 处理得到的17 个特征的重要性得分\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n154\n应用数学进展\n\nRow0-Row12 是MFCC 的子特征，Row13 是短时平均振幅，Row14 是短时能量，Row15 是频谱质\n心，Row16 为频谱带宽。根据图中显示的结果，Row8 以后的特征重要性得分低于0.0001，故取前12 个\n特征，进行后续的分类，这12 个特征中，有75%的特征属于梅尔谱频谱特征，这是因为梅尔谱频特征共\n13 维，占所有特征的76.4%，能够提供丰富的频域信息与时域变化，且涵盖声音特性信息。\n2.3. CNN-CBAM-BiLSTM 模型\nCBAM 是一种用于增强卷积神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "80b637f5-6871-462c-a784-8a5eb4a233f1",
+              "distance": 0.573844,
+              "similarity": 0.426156,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，提炼关键信息，让数据契合后续分析需求。针对长时音频数据，通常采\n用分帧处理与窗函数应用(如汉宁窗)实现信号的平稳化。特征提取环节则从预处理后的数据中提取多维\n度特征参数，涵盖时域(如过零率，短时能量)，频域(如频谱质心，带宽)及倒谱域(如梅尔频率倒谱系数，\nMFCC)等方面特征。特征处理旨在对提取的全部特征进行归一化操作，同时筛选出关键特征。音频分类\n基本流程如图2 所示。\n\nFigure 2. Basic workflow of audio classification\n图2. 音频分类基本流程\n\n本研究收集，整理的数据集涵盖了兴山民歌与其他九种类型民歌。其中，其他类型民歌包含劳动号\n子，搬运号子，渔船号子，灯歌，小调，舞歌，田歌，儿歌以及生活音调这九种不同音乐流派，总计1800\n首音频数据作为实验样本。各音频类型及其对应的数量详情如表1 所示。\n\nTable 1. Audio types and quantities\n表1.",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "350d5ff9-4657-4f6a-bcd5-1cda05c46c94",
+              "distance": 0.575566,
+              "similarity": 0.424434,
+              "page_number": 1,
+              "section_title": "关键词",
+              "section_path": [
+                "关键词"
+              ],
+              "is_reference_section": false,
+              "content_preview": "[Section: 关键词]\n音频分类，注意力机制，深度学习\n\nA Study on the Classification of Xingshan\nFolk Songs Using RF-CNN-CBAM-BiLSTM\nYuxin Bai1, Yilin Liu1, Mengfei Lei2, Weiwei Xiao1*\n1College of Science, North China University of Technology, Beijing\n2Tengfei School of Haidian Foreign Language Academy, Beijing\n\nReceived: Jul. 12th, 2025; accepted: Aug. 5th, 2025; published: Aug. 14th, 2025\n\n*通讯作者。\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n148\n应用数学进展",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "71870498-43a4-4e84-bbaa-388d9035dc2a",
+              "distance": 0.579937,
+              "similarity": 0.420063,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "：\n\n( )\n( )\n( )\n1\n0\n,\n0,1,\n,\n1\nN\ni\ni\nm\nk\nS\nm\nX\nk H\nk\nm\nM\n−\n=\n=\n=\n−\n∑\n\n\n(9)\n对数运算与离散余弦变换(DCT)对梅尔频谱\n( )\niS m 取对数，得到对数梅尔频谱\n( )\n(\n)\nlog\niS\nm\n。这一步是\n为了模拟人类听觉系统对声音强度的对数响应。然后对对数梅尔频谱进行离散余弦变换(DCT)，得到\nMFCC 系数\n( )\nic n ：\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n153\n应用数学进展\n\n( )\n( )\n(\n)\n1\n0\n2\n1\nlog\ncos\n,\n0,1,\n,\n1\n2\nM\ni\ni\nm\nn\nc n\nS\nm\nm\nn\nL\nM\nM\n−\n=\n\n\n\n\n=\n+\n=\n−\n\n\n\n\n\n\n\n\nπ\n∑\n\n\n(10)\n其中，L 是所取的MFCC 的数量，在本研究中取前13 个系数作为特征。\n综上所述，从时域、频域和倒谱域三个方面对预处理后的每帧信号提取特征，时域提取2 个能反映\n信号时间变化特性的特征，频域提取2 个展示频率组成情况的特征，倒谱域提取13 个有助",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "5ede823a-1c05-469d-8e72-b6246a846bf4",
+              "distance": 0.582419,
+              "similarity": 0.417581,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "tV1、BiLSTM、LSTM 五个神经网络模型进行对比实验，给出所有模型的分类准确率和每一轮\n运行时间。在兴山民歌识别任务中，本文提出的RF-CNN-CBAM-BiLSTM 模型在分类性能与计算效率上\n均展现出显著优势。如图9 所示，该模型以91.67%的准确率超越所有对比模型，较未利用RF 降维的\nCNN-CBAM-BiLSTM 模型的准确率89.97%，提升1.7%，较ResNet50 的准确率87.36%，提升4.31%。\n这一性能提升得益于特征降维与模型架构的协同优化：通过随机森林(RF)对原始17 * 250 维特征进行筛\n选，保留12 * 250 维高区分性特征，剔除冗余信息，使模型更聚焦于关键声学模式；同时，CNN-CBAM\n模块通过通道与空间注意力机制强化局部特征提取能力，BiLSTM 捕捉音频序列的长期依赖关系，二者\n结合有效弥补降维带来的信息损失，确保模型在低维特征空间中仍能精准建模兴山民歌的独特性。\n在运行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间",
+                "分类性能",
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 8,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "917f63ce-2273-460b-9de9-9f84b089f06f",
+              "distance": 0.585616,
+              "similarity": 0.414384,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "行效率方面，本文模型也呈现优势。如图10，分类模型的每一轮运行时间对比。本文模型每一\n轮运行时间仅需22 秒，较未降维的CNN-CBAM-BiLSTM 模型的每一轮运行时间27 秒，缩短18.5%，且\n显著优于参数量庞大的ResNet50 模型的每一轮运行时间257 秒与EfficientNetV1 模型的每一轮运行时间\n51 秒。效率提升的核心在于特征降维对计算复杂度的优化：输入特征维度从17 * 250 压缩至12 * 250 (减\n少29.4%)。尽管BiLSTM 模型的每一轮运行时间(18 秒)与LSTM 模型的每一轮运行时间(15 秒)耗时更\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n158\n应用数学进展\n\n短，但其准确率较本文模型存在显著差距5.34%~6.47%，表明单一模块模型难以兼顾效率与精度，而本\n文模型通过多模块融合实现了二者均衡。\n\nFigure 9. Comparison of accuracy of classification models\n图9. 分类模型的准确率对比\n\nFigure 10. Comparison of",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行时间"
+              ]
+            },
+            {
+              "rank": 9,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "479adbed-51ba-4051-b6d1-f690ac94ac47",
+              "distance": 0.592093,
+              "similarity": 0.407907,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "识别算法，解决已有技术的\n局限性，构建了包含1800 首民歌样本的音频数据集，并详细阐述了音频预处理流程，特征提取方法以及\n针对BiLSTM 音频分类模型提出的改进模型RF-CNN-CBAM-BiLSTM。最后，介绍了音频识别的实验结\n果，实验部分通过准确率，F1 分数等5 项指标，对改进模型的性能进行了量化评估，并与多种基准模型\n(如ResNet50, EfficientNetV1 等)开展了兴山民歌识别效果的对比分析。\n2. RF-CNN-CBAM-BiLSTM 算法流程\n图1 为RF-CNN-CBAM-BiLSTM 分类模型流程图。\n\nFigure 1. Flowchart of the RF-CNN-CBAM-BiLSTM classification model\n图1. 基于RF-CNN-CBAM-BiLSTM 分类模型流程图\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n150\n应用数学进展\n\n2.1. 数据预处理与特征提取\n音频数据输入分类模型前，需要经过预处理，特征提取以及特征处理三个步骤[3]。预处理旨在对原\n始音频信号开展削减噪声干扰，",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "b7ad556b-d2c2-45b3-a576-d79cb821baf4",
+              "distance": 0.594412,
+              "similarity": 0.405588,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "神经网络(CNN)性能的注意力机制模块[11]，如图5 所示。CBAM 旨在\n提升卷积神经网络(CNN)的性能，具体通过引入通道注意力与空间注意力机制，且不增加网络复杂度来实\n现。该模块包含通道注意力模块(C-channel)与空间注意力模块(S-channel)两大核心组件。这两个模块能够\n分别嵌入CNN 的不同层级，以此强化特征表达能力，助力模型更好地捕捉关键信息。\n\nFigure 5. CBAM hybrid attention module\n图5. CBAM 混合注意力模块\n\n在兴山民歌的识别领域，存在多重技术瓶颈。一方面，兴山民歌音频样本普遍存在模糊、嘈杂的特\n性，这使得传统模型在识别过程中遭遇严重阻碍，有效特征易被噪声干扰和掩盖，导致识别准确率较低。\n另一方面，在构建模型的过程中，未能充分关注音频数据在时间维度上的前后关联性，无法满足对兴山\n民歌深入研究与保护的需求。尤为关键的是，截至目前，尚未有针对兴山民歌在信号处理方面的专门研\n究，这无疑加剧了兴山民歌音频处理工作的难度。\n鉴于此，本研究创新性地提出了一种融合注意力机制的卷积和双向长短期记忆网络。兴山民歌音频\n在时间序列",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 11,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "7db2a359-3379-4e60-9c3e-558656c1c682",
+              "distance": 0.5951,
+              "similarity": 0.4049,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "其独特的决策树构建与投票机制，有效评估各个特征的重要性。通过RF 进行特征选择，成功减少\n了特征数量，这使得模型在训练和预测过程中，需要处理的数据量大幅降低，从而显著减少了系统运行\n时间。\n经过RF 筛选后的特征子集，去除了对分类贡献较小的冗余特征，保留了与兴山民歌分类最为紧密相\n关的关键特征。这些精选特征使得模型能够更加专注于学习有效信息，避免了因无关特征干扰而导致的\n学习偏差。从实验结果来看，虽然特征数量减少，但模型的准确率较之前反而更高。这表明RF 不仅实现\n了数据降维，还优化了模型输入，使得模型能够更高效地捕捉兴山民歌音频中的关键模式与特征，进而\n提升了分类性能。\n本实验采用5 秒时长的音频片段进行分析，每个音频片段被划分为250 个等长时间帧，帧长20 毫\n秒。针对每个时间帧，提取时域、频域倒谱频域这三方面特征，共获得17 维数据。利用RF 方法进行降\n维处理后，生成一个尺寸为250 行12 列的矩阵，该矩阵将作为后续模型的输入。特征重要性得分如图4\n所示。\n\nFigure 4. Importance scores of the 17 features obtained vi",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "分类性能"
+              ]
+            },
+            {
+              "rank": 12,
+              "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+              "chunk_id": "72ba516f-ad90-4eb1-8839-fdbd6e1cbc9f",
+              "distance": 0.60131,
+              "similarity": 0.39869,
+              "page_number": 2,
+              "section_title": "引言",
+              "section_path": [
+                "引言"
+              ],
+              "is_reference_section": false,
+              "content_preview": "波动较大，尽管下降速度相对较慢，但也体现出模型在测试集上随训练的进行性能也有所提升，能够\n对新数据进行一定程度的有效识别。两条曲线的变化趋势共同显示出该模型在训练过程中不断优化，对\n训练数据和新数据均具备一定的处理能力，在山歌与其他类型民歌的二分类任务中展现出了良好的识别\n性能与应用潜力。\n\nFigure 7. Loss function curve of the RF-CNN-BiLSTM-CBAM classification model\n图7. RF-CNN-BiLSTM-CBAM 分类模型的损失函数曲线\n\n白雨欣 等\n\nDOI: 10.12677/aam.2025.148379\n157\n应用数学进展\n\nRF-CNN-BiLSTM-CBAM 分类模型的准确率曲线如图8 所示。该曲线识别性能较好，鲁棒性较高。\n训练准确率(蓝色曲线)与测试准确率(橙色曲线)在训练初期虽有波动，但随着训练轮数增加，曲线均呈显\n著上升趋势。训练准确率最终接近0.98，且趋于平稳，表明模型对训练数据的学习效果较好，能够准确\n地对训练集中的山歌与其他类型民歌进行分类。测试准确率也稳定在0.91 左右，这显示",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        }
+      ],
+      "query_embedding_dimension": 768
+    },
+    {
+      "case_id": "paper004_q002",
+      "paper_id": "paper004",
+      "paper_title": "基于深度学习的图像融合方法综述",
+      "question": "论文从哪些方面介绍图像融合领域？",
+      "expected_keywords": [
+        "技术发展",
+        "主流数据集",
+        "评价指标",
+        "定性实验",
+        "定量实验",
+        "运行效率"
+      ],
+      "focus_keywords": [
+        "网络架构",
+        "监督范式",
+        "数据集",
+        "评估指标",
+        "定性分析",
+        "定量分析",
+        "运行效率"
+      ],
+      "fail_reason": "retrieval_context_weak",
+      "initial_assessment": "prompt / eval keyword / retrieval 组织混合问题",
+      "target_document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+      "target_file_name": "基于深度学习的图像融合方法综述_唐霖峰.pdf",
+      "used_document_filter": true,
+      "runs": [
+        {
+          "params": {
+            "top_k": 6,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 6,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行效率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "网络架构",
+              "监督范式",
+              "评估指标",
+              "运行效率"
+            ],
+            "hit_count": 4,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1928f827-d9f0-4a89-b69b-958ef4db06a4",
+              "distance": 0.195507,
+              "similarity": 0.804493,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个角度详细阐述了各类方法的基本思想并讨论\n了各类方法的特点，同时针对现有算法的局限性，提\n出了进一步的改进方向。此外，为了方便相关人员\n开展研究，详尽介绍了不同融合任务中常用的数据\n集和评估指标。对每一类融合任务，从定性评估、定\n量评估以及运行效率等多个角度分析了代表性方法\n的性能。\n尽管深度学习在图像融合领域取得了巨大成\n功，但仍存在一些严峻挑战和难题。\n1) 未配准图像融合。现有图像融合算法均要\n求源图像在空间上是严格对齐的。然而在实际应用\n中，由于镜头畸变、尺度差异、视差以及拍摄位置的\n影响，无论是不同传感器拍摄的图像还是数码相机\n在不同设置下拍摄的图像都无法实现严格的空间对\n齐。通常情况下，需要使用成熟的图像配准算法或\n手工标注在融合前配准源图像( Jiang 等，2021) 。已\n有的配准算法能够成功配准相同模态的图像，但对\n于多模图像，尚未有对大规模多模图像鲁棒的配准\n算法。事实上，多模图像融合能够削弱多模数据中\n的模",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6ee783b4-5890-4e90-ae73-3d5b23c6e1bb",
+              "distance": 0.205196,
+              "similarity": 0.794804,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "项目( 2020BAB113)\nSupported by: National Natural Science Foundation of China ( 62276192) ; Natural Science Foundation of Hubei Province，China ( 2020BAB113)\n基于深度学习的图像融合方法综述\n唐霖峰，张浩，徐涵，马佳义\n*\n武汉大学电子信息学院，武汉\n430072\n摘\n要:\n图像融合技术旨在将不同源图像中的互补信息整合到单幅融合图像中以全面表征成像场景，并促进后\n续的视觉任务。随着深度学习的兴起，基于深度学习的图像融合算法如雨后春笋般涌现，特别是自编码器、生成对\n抗网络以及Transformer 等技术的出现使图像融合性能产生了质的飞跃。本文对不同融合任务场景下的前沿深度\n融合算法进行全面论述和分析。首先，介绍图像融合的基本概念以及不同融合场景的定义。针对多模图像融合、\n数字摄影图像融合以及遥感影像融合等不同的融合场景，从网络架构和监督范式等角度全面阐述各类方法的基本\n思想，并讨论各类方法的特点。其次，总结各类算法的局限性，并给出进一步的改",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "c1434d26-f2e4-4a51-9854-cb37623a6cd9",
+              "distance": 0.226286,
+              "similarity": 0.773714,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "标，但是缺乏对场景的\n细节描述( Ma 等，2019a) 。此外，具有不同ISO( in-\nternational organization for standardization) 和曝光时\n间的相机只能捕捉在其动态范围内的场景信息，而\n不可避免地丢失动态范围之外的信息。值得注意的\n是，不同类型或不同光学设置下的传感器通常包含\n大量互补信息，这也启发人们将这些互补信息集成\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n5\n到单一的图像中。因此，图像融合技术应运而生。\n根据成像设备/成像设置的差异，图像融合通常\n可以分为3 类，即多模图像融合、数字摄影图像融合\n和遥感影像融合。\n1) 多模图像融合。由于成像原理的限制，单一\n类型的传感器只能捕获部分场景信息。多模图像融\n合能够将多个传感器捕获的有用信息整合到单幅的\n融合图像中，以实现对场景有效且全面地表征。典\n型的多模图像融合包括红外和可见光图像融合以及\n医学图像融合。\n2) 数字摄影图像融合。由于光学器件的限制，\n数码相机通常无法在单一设置下收集成像场景中的\n所有信息。具体来",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "613e945d-edb3-4a55-9db6-3332ae01f716",
+              "distance": 0.237135,
+              "similarity": 0.762865,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "neural network．Journal\nof Computer-Aided Design and Computer Graphics，28 ( 3 ) :\n411-419 ( 殷明，庞纪勇，魏远远，段普宏．2016．结合NSDTCT\n和压缩感知PCNN 的图像融合算法．计算机辅助设计与图形学\n学报，28 ( 3 ) : 411-419)\n［DOI: 10．3969 /j．issn．1003-9775．\n2016．03．005］\nYu L X，Cui Q，Che J，Xu Y L，Zhang F and Li F．2022．Image fusion\nmodel based on structure reparameterization method and spatial\nattention mechanism．Application Ｒesearch of Computers，39( 5) :\n1573-1578，1600 ( 俞利新，崔祺，车军，许悦雷，张凡，李帆．\n2022．结合结构重参数化方法与空间注意力机制的图像融合模\n型．计算机应用研究，39 ( 5) : 1573-1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6161a42b-5afa-415a-9f44-e8285773b787",
+              "distance": 0.237584,
+              "similarity": 0.762416,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "mplementary metal oxide semiconductor) 等元件记\n录场景信息，但是由于动态范围有限，CCD 和CMOS\n等元件无法承受过大的曝光差异。因此，在曝光差\n异过大时，单幅图像无法准确呈现场景中的所有细\n节信息。此外，受光学镜头景深限制的影响，数码相\n机很难在一幅图像内保证场景中所有目标都在景深\n范围内。然而只有在景深范围内的物体才能在图像\n中清晰地呈现，景深外的物体将变得模糊不清。数\n字摄影图像融合旨在将不同光学设置下拍摄的多幅\n图像组合在一起，并生成具有高动态范围的全聚焦\n图像，这是解决上述难题的不二之选。\n1. 2. 1\n多曝光图像融合\n通常成像场景中存在较大的光照变化，此时由\n于传感器捕获的动态范围有限，单一光学设置下拍\n摄的数字图像会因过度曝光或曝光不足而不可避免\n地丢失场景信息。多曝光图像融合能够将不同曝光\n程度图像中的有效信息整合起来并产生曝光合适、\n场景信息丰富的融合图像。本文通过介绍基于\nCNN 和基于GAN 的多曝光图像融合框架，回顾基\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "7222a01a-0ed7-4972-9443-a4536f51e6e3",
+              "distance": 0.2406,
+              "similarity": 0.7594,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤波和改进PCNN 的NSST 域多光谱与全色图像\n融合．中国图象图形学报，24( 3) : 435-446) ［DOI: 10．11834 /\njig．180399］\nJung H，Kim Y，Jang H，Ha N and Sohn K．2020．Unsupervised deep\nimage fusion with structure tensor representations．IEEE Transac-\ntions on Image Processing，29: 3845-3858 ［DOI: 10．1109 /TIP．\n2020．2966075］\nLahoud F and Süsstrunk S．2019．\nZero-learning fast medical image\nfusion / /Proceedings of the 22nd International Conference on Infor-\nmatio",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 8,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 8,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行效率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "网络架构",
+              "监督范式",
+              "评估指标",
+              "运行效率"
+            ],
+            "hit_count": 4,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1928f827-d9f0-4a89-b69b-958ef4db06a4",
+              "distance": 0.195507,
+              "similarity": 0.804493,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个角度详细阐述了各类方法的基本思想并讨论\n了各类方法的特点，同时针对现有算法的局限性，提\n出了进一步的改进方向。此外，为了方便相关人员\n开展研究，详尽介绍了不同融合任务中常用的数据\n集和评估指标。对每一类融合任务，从定性评估、定\n量评估以及运行效率等多个角度分析了代表性方法\n的性能。\n尽管深度学习在图像融合领域取得了巨大成\n功，但仍存在一些严峻挑战和难题。\n1) 未配准图像融合。现有图像融合算法均要\n求源图像在空间上是严格对齐的。然而在实际应用\n中，由于镜头畸变、尺度差异、视差以及拍摄位置的\n影响，无论是不同传感器拍摄的图像还是数码相机\n在不同设置下拍摄的图像都无法实现严格的空间对\n齐。通常情况下，需要使用成熟的图像配准算法或\n手工标注在融合前配准源图像( Jiang 等，2021) 。已\n有的配准算法能够成功配准相同模态的图像，但对\n于多模图像，尚未有对大规模多模图像鲁棒的配准\n算法。事实上，多模图像融合能够削弱多模数据中\n的模",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6ee783b4-5890-4e90-ae73-3d5b23c6e1bb",
+              "distance": 0.205196,
+              "similarity": 0.794804,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "项目( 2020BAB113)\nSupported by: National Natural Science Foundation of China ( 62276192) ; Natural Science Foundation of Hubei Province，China ( 2020BAB113)\n基于深度学习的图像融合方法综述\n唐霖峰，张浩，徐涵，马佳义\n*\n武汉大学电子信息学院，武汉\n430072\n摘\n要:\n图像融合技术旨在将不同源图像中的互补信息整合到单幅融合图像中以全面表征成像场景，并促进后\n续的视觉任务。随着深度学习的兴起，基于深度学习的图像融合算法如雨后春笋般涌现，特别是自编码器、生成对\n抗网络以及Transformer 等技术的出现使图像融合性能产生了质的飞跃。本文对不同融合任务场景下的前沿深度\n融合算法进行全面论述和分析。首先，介绍图像融合的基本概念以及不同融合场景的定义。针对多模图像融合、\n数字摄影图像融合以及遥感影像融合等不同的融合场景，从网络架构和监督范式等角度全面阐述各类方法的基本\n思想，并讨论各类方法的特点。其次，总结各类算法的局限性，并给出进一步的改",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "c1434d26-f2e4-4a51-9854-cb37623a6cd9",
+              "distance": 0.226286,
+              "similarity": 0.773714,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "标，但是缺乏对场景的\n细节描述( Ma 等，2019a) 。此外，具有不同ISO( in-\nternational organization for standardization) 和曝光时\n间的相机只能捕捉在其动态范围内的场景信息，而\n不可避免地丢失动态范围之外的信息。值得注意的\n是，不同类型或不同光学设置下的传感器通常包含\n大量互补信息，这也启发人们将这些互补信息集成\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n5\n到单一的图像中。因此，图像融合技术应运而生。\n根据成像设备/成像设置的差异，图像融合通常\n可以分为3 类，即多模图像融合、数字摄影图像融合\n和遥感影像融合。\n1) 多模图像融合。由于成像原理的限制，单一\n类型的传感器只能捕获部分场景信息。多模图像融\n合能够将多个传感器捕获的有用信息整合到单幅的\n融合图像中，以实现对场景有效且全面地表征。典\n型的多模图像融合包括红外和可见光图像融合以及\n医学图像融合。\n2) 数字摄影图像融合。由于光学器件的限制，\n数码相机通常无法在单一设置下收集成像场景中的\n所有信息。具体来",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "613e945d-edb3-4a55-9db6-3332ae01f716",
+              "distance": 0.237135,
+              "similarity": 0.762865,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "neural network．Journal\nof Computer-Aided Design and Computer Graphics，28 ( 3 ) :\n411-419 ( 殷明，庞纪勇，魏远远，段普宏．2016．结合NSDTCT\n和压缩感知PCNN 的图像融合算法．计算机辅助设计与图形学\n学报，28 ( 3 ) : 411-419)\n［DOI: 10．3969 /j．issn．1003-9775．\n2016．03．005］\nYu L X，Cui Q，Che J，Xu Y L，Zhang F and Li F．2022．Image fusion\nmodel based on structure reparameterization method and spatial\nattention mechanism．Application Ｒesearch of Computers，39( 5) :\n1573-1578，1600 ( 俞利新，崔祺，车军，许悦雷，张凡，李帆．\n2022．结合结构重参数化方法与空间注意力机制的图像融合模\n型．计算机应用研究，39 ( 5) : 1573-1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6161a42b-5afa-415a-9f44-e8285773b787",
+              "distance": 0.237584,
+              "similarity": 0.762416,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "mplementary metal oxide semiconductor) 等元件记\n录场景信息，但是由于动态范围有限，CCD 和CMOS\n等元件无法承受过大的曝光差异。因此，在曝光差\n异过大时，单幅图像无法准确呈现场景中的所有细\n节信息。此外，受光学镜头景深限制的影响，数码相\n机很难在一幅图像内保证场景中所有目标都在景深\n范围内。然而只有在景深范围内的物体才能在图像\n中清晰地呈现，景深外的物体将变得模糊不清。数\n字摄影图像融合旨在将不同光学设置下拍摄的多幅\n图像组合在一起，并生成具有高动态范围的全聚焦\n图像，这是解决上述难题的不二之选。\n1. 2. 1\n多曝光图像融合\n通常成像场景中存在较大的光照变化，此时由\n于传感器捕获的动态范围有限，单一光学设置下拍\n摄的数字图像会因过度曝光或曝光不足而不可避免\n地丢失场景信息。多曝光图像融合能够将不同曝光\n程度图像中的有效信息整合起来并产生曝光合适、\n场景信息丰富的融合图像。本文通过介绍基于\nCNN 和基于GAN 的多曝光图像融合框架，回顾基\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "7222a01a-0ed7-4972-9443-a4536f51e6e3",
+              "distance": 0.2406,
+              "similarity": 0.7594,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤波和改进PCNN 的NSST 域多光谱与全色图像\n融合．中国图象图形学报，24( 3) : 435-446) ［DOI: 10．11834 /\njig．180399］\nJung H，Kim Y，Jang H，Ha N and Sohn K．2020．Unsupervised deep\nimage fusion with structure tensor representations．IEEE Transac-\ntions on Image Processing，29: 3845-3858 ［DOI: 10．1109 /TIP．\n2020．2966075］\nLahoud F and Süsstrunk S．2019．\nZero-learning fast medical image\nfusion / /Proceedings of the 22nd International Conference on Infor-\nmatio",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "54b1e77a-a5e3-40f6-9a94-93fb03e913f9",
+              "distance": 0.246173,
+              "similarity": 0.753827,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "tion School，Wuhan University，Wuhan\n430072，China\nAbstract: Image fusion aims to integrate complementary information from multi-source images into a single fused image to\ncharacterize the imaging scene and facilitate the subsequent vision tasks further. In recent years，it has been a concern in\nthe field of image processing，especially in artificial intelligence-related industries like intelligent medical service，autono-\nmous driving，smart photography，security surveillance，and military monitoring. M",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bbbc951b-8cea-4921-bda5-a7f4381eda75",
+              "distance": 0.246434,
+              "similarity": 0.753566,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Multimedia．\nChengdu，China: Association for Computing Machinery: 1600-1608\n［DOI: 10．1145 /3474085．3475299］\nLiu X B，Mei W B and Du H Q．2017a．Structure tensor and nonsub-\nsampled shearlet transform based algorithm for CT and MＲI image\nfusion．Neurocomputing，235: 131-139 ［DOI: 10．1016 /j．neu-\ncom．2017．01．006］\nLiu X Y，Liu Q J and Wang Y H．2020．Ｒemote sensing image fusion\nbased on two-stream fusion network．Information Fusion，55: 1-15\n［DOI: 10．1016 /j．inffus．2019．07．010］\nLiu Y，Chen X，Cheng J and Peng",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行效率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "网络架构",
+              "监督范式",
+              "评估指标",
+              "运行效率"
+            ],
+            "hit_count": 4,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1928f827-d9f0-4a89-b69b-958ef4db06a4",
+              "distance": 0.195507,
+              "similarity": 0.804493,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个角度详细阐述了各类方法的基本思想并讨论\n了各类方法的特点，同时针对现有算法的局限性，提\n出了进一步的改进方向。此外，为了方便相关人员\n开展研究，详尽介绍了不同融合任务中常用的数据\n集和评估指标。对每一类融合任务，从定性评估、定\n量评估以及运行效率等多个角度分析了代表性方法\n的性能。\n尽管深度学习在图像融合领域取得了巨大成\n功，但仍存在一些严峻挑战和难题。\n1) 未配准图像融合。现有图像融合算法均要\n求源图像在空间上是严格对齐的。然而在实际应用\n中，由于镜头畸变、尺度差异、视差以及拍摄位置的\n影响，无论是不同传感器拍摄的图像还是数码相机\n在不同设置下拍摄的图像都无法实现严格的空间对\n齐。通常情况下，需要使用成熟的图像配准算法或\n手工标注在融合前配准源图像( Jiang 等，2021) 。已\n有的配准算法能够成功配准相同模态的图像，但对\n于多模图像，尚未有对大规模多模图像鲁棒的配准\n算法。事实上，多模图像融合能够削弱多模数据中\n的模",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6ee783b4-5890-4e90-ae73-3d5b23c6e1bb",
+              "distance": 0.205196,
+              "similarity": 0.794804,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "项目( 2020BAB113)\nSupported by: National Natural Science Foundation of China ( 62276192) ; Natural Science Foundation of Hubei Province，China ( 2020BAB113)\n基于深度学习的图像融合方法综述\n唐霖峰，张浩，徐涵，马佳义\n*\n武汉大学电子信息学院，武汉\n430072\n摘\n要:\n图像融合技术旨在将不同源图像中的互补信息整合到单幅融合图像中以全面表征成像场景，并促进后\n续的视觉任务。随着深度学习的兴起，基于深度学习的图像融合算法如雨后春笋般涌现，特别是自编码器、生成对\n抗网络以及Transformer 等技术的出现使图像融合性能产生了质的飞跃。本文对不同融合任务场景下的前沿深度\n融合算法进行全面论述和分析。首先，介绍图像融合的基本概念以及不同融合场景的定义。针对多模图像融合、\n数字摄影图像融合以及遥感影像融合等不同的融合场景，从网络架构和监督范式等角度全面阐述各类方法的基本\n思想，并讨论各类方法的特点。其次，总结各类算法的局限性，并给出进一步的改",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "c1434d26-f2e4-4a51-9854-cb37623a6cd9",
+              "distance": 0.226286,
+              "similarity": 0.773714,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "标，但是缺乏对场景的\n细节描述( Ma 等，2019a) 。此外，具有不同ISO( in-\nternational organization for standardization) 和曝光时\n间的相机只能捕捉在其动态范围内的场景信息，而\n不可避免地丢失动态范围之外的信息。值得注意的\n是，不同类型或不同光学设置下的传感器通常包含\n大量互补信息，这也启发人们将这些互补信息集成\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n5\n到单一的图像中。因此，图像融合技术应运而生。\n根据成像设备/成像设置的差异，图像融合通常\n可以分为3 类，即多模图像融合、数字摄影图像融合\n和遥感影像融合。\n1) 多模图像融合。由于成像原理的限制，单一\n类型的传感器只能捕获部分场景信息。多模图像融\n合能够将多个传感器捕获的有用信息整合到单幅的\n融合图像中，以实现对场景有效且全面地表征。典\n型的多模图像融合包括红外和可见光图像融合以及\n医学图像融合。\n2) 数字摄影图像融合。由于光学器件的限制，\n数码相机通常无法在单一设置下收集成像场景中的\n所有信息。具体来",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "613e945d-edb3-4a55-9db6-3332ae01f716",
+              "distance": 0.237135,
+              "similarity": 0.762865,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "neural network．Journal\nof Computer-Aided Design and Computer Graphics，28 ( 3 ) :\n411-419 ( 殷明，庞纪勇，魏远远，段普宏．2016．结合NSDTCT\n和压缩感知PCNN 的图像融合算法．计算机辅助设计与图形学\n学报，28 ( 3 ) : 411-419)\n［DOI: 10．3969 /j．issn．1003-9775．\n2016．03．005］\nYu L X，Cui Q，Che J，Xu Y L，Zhang F and Li F．2022．Image fusion\nmodel based on structure reparameterization method and spatial\nattention mechanism．Application Ｒesearch of Computers，39( 5) :\n1573-1578，1600 ( 俞利新，崔祺，车军，许悦雷，张凡，李帆．\n2022．结合结构重参数化方法与空间注意力机制的图像融合模\n型．计算机应用研究，39 ( 5) : 1573-1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6161a42b-5afa-415a-9f44-e8285773b787",
+              "distance": 0.237584,
+              "similarity": 0.762416,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "mplementary metal oxide semiconductor) 等元件记\n录场景信息，但是由于动态范围有限，CCD 和CMOS\n等元件无法承受过大的曝光差异。因此，在曝光差\n异过大时，单幅图像无法准确呈现场景中的所有细\n节信息。此外，受光学镜头景深限制的影响，数码相\n机很难在一幅图像内保证场景中所有目标都在景深\n范围内。然而只有在景深范围内的物体才能在图像\n中清晰地呈现，景深外的物体将变得模糊不清。数\n字摄影图像融合旨在将不同光学设置下拍摄的多幅\n图像组合在一起，并生成具有高动态范围的全聚焦\n图像，这是解决上述难题的不二之选。\n1. 2. 1\n多曝光图像融合\n通常成像场景中存在较大的光照变化，此时由\n于传感器捕获的动态范围有限，单一光学设置下拍\n摄的数字图像会因过度曝光或曝光不足而不可避免\n地丢失场景信息。多曝光图像融合能够将不同曝光\n程度图像中的有效信息整合起来并产生曝光合适、\n场景信息丰富的融合图像。本文通过介绍基于\nCNN 和基于GAN 的多曝光图像融合框架，回顾基\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "7222a01a-0ed7-4972-9443-a4536f51e6e3",
+              "distance": 0.2406,
+              "similarity": 0.7594,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤波和改进PCNN 的NSST 域多光谱与全色图像\n融合．中国图象图形学报，24( 3) : 435-446) ［DOI: 10．11834 /\njig．180399］\nJung H，Kim Y，Jang H，Ha N and Sohn K．2020．Unsupervised deep\nimage fusion with structure tensor representations．IEEE Transac-\ntions on Image Processing，29: 3845-3858 ［DOI: 10．1109 /TIP．\n2020．2966075］\nLahoud F and Süsstrunk S．2019．\nZero-learning fast medical image\nfusion / /Proceedings of the 22nd International Conference on Infor-\nmatio",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "54b1e77a-a5e3-40f6-9a94-93fb03e913f9",
+              "distance": 0.246173,
+              "similarity": 0.753827,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "tion School，Wuhan University，Wuhan\n430072，China\nAbstract: Image fusion aims to integrate complementary information from multi-source images into a single fused image to\ncharacterize the imaging scene and facilitate the subsequent vision tasks further. In recent years，it has been a concern in\nthe field of image processing，especially in artificial intelligence-related industries like intelligent medical service，autono-\nmous driving，smart photography，security surveillance，and military monitoring. M",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bbbc951b-8cea-4921-bda5-a7f4381eda75",
+              "distance": 0.246434,
+              "similarity": 0.753566,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Multimedia．\nChengdu，China: Association for Computing Machinery: 1600-1608\n［DOI: 10．1145 /3474085．3475299］\nLiu X B，Mei W B and Du H Q．2017a．Structure tensor and nonsub-\nsampled shearlet transform based algorithm for CT and MＲI image\nfusion．Neurocomputing，235: 131-139 ［DOI: 10．1016 /j．neu-\ncom．2017．01．006］\nLiu X Y，Liu Q J and Wang Y H．2020．Ｒemote sensing image fusion\nbased on two-stream fusion network．Information Fusion，55: 1-15\n［DOI: 10．1016 /j．inffus．2019．07．010］\nLiu Y，Chen X，Cheng J and Peng",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.248027,
+              "similarity": 0.751973,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "b3758098-6ade-429f-a9c8-f2184e90b09d",
+              "distance": 0.2497,
+              "similarity": 0.7503,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: #5002412\n［DOI: 10．1109 /TIM．2020．3029360］\nLi J X，Guo X B，Lu G M，Zhang B，Xu Y，Wu F and Zhang D．\n2020c．DＲPL: deep regression pair learning for multi-focus image\nfusion．IEEE Transactions on Image Processing，29: 4816-4831\n［DOI: 10．1109 /TIP．2020．2976190］\nLi S T，Kang X D，Fang L Y，Hu J W and Yin H T．2017．Pixel-level\nimage fusion: a survey of the state of the art．Information Fusion，\n33: 100-112 ［DOI: 10．1016 /j．inffus．2016．05．004］\nLi Y and Wu X J．2014．Image fusion based on sparse",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行效率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "网络架构",
+              "监督范式",
+              "评估指标",
+              "运行效率"
+            ],
+            "hit_count": 4,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1928f827-d9f0-4a89-b69b-958ef4db06a4",
+              "distance": 0.195507,
+              "similarity": 0.804493,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个角度详细阐述了各类方法的基本思想并讨论\n了各类方法的特点，同时针对现有算法的局限性，提\n出了进一步的改进方向。此外，为了方便相关人员\n开展研究，详尽介绍了不同融合任务中常用的数据\n集和评估指标。对每一类融合任务，从定性评估、定\n量评估以及运行效率等多个角度分析了代表性方法\n的性能。\n尽管深度学习在图像融合领域取得了巨大成\n功，但仍存在一些严峻挑战和难题。\n1) 未配准图像融合。现有图像融合算法均要\n求源图像在空间上是严格对齐的。然而在实际应用\n中，由于镜头畸变、尺度差异、视差以及拍摄位置的\n影响，无论是不同传感器拍摄的图像还是数码相机\n在不同设置下拍摄的图像都无法实现严格的空间对\n齐。通常情况下，需要使用成熟的图像配准算法或\n手工标注在融合前配准源图像( Jiang 等，2021) 。已\n有的配准算法能够成功配准相同模态的图像，但对\n于多模图像，尚未有对大规模多模图像鲁棒的配准\n算法。事实上，多模图像融合能够削弱多模数据中\n的模",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6ee783b4-5890-4e90-ae73-3d5b23c6e1bb",
+              "distance": 0.205196,
+              "similarity": 0.794804,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "项目( 2020BAB113)\nSupported by: National Natural Science Foundation of China ( 62276192) ; Natural Science Foundation of Hubei Province，China ( 2020BAB113)\n基于深度学习的图像融合方法综述\n唐霖峰，张浩，徐涵，马佳义\n*\n武汉大学电子信息学院，武汉\n430072\n摘\n要:\n图像融合技术旨在将不同源图像中的互补信息整合到单幅融合图像中以全面表征成像场景，并促进后\n续的视觉任务。随着深度学习的兴起，基于深度学习的图像融合算法如雨后春笋般涌现，特别是自编码器、生成对\n抗网络以及Transformer 等技术的出现使图像融合性能产生了质的飞跃。本文对不同融合任务场景下的前沿深度\n融合算法进行全面论述和分析。首先，介绍图像融合的基本概念以及不同融合场景的定义。针对多模图像融合、\n数字摄影图像融合以及遥感影像融合等不同的融合场景，从网络架构和监督范式等角度全面阐述各类方法的基本\n思想，并讨论各类方法的特点。其次，总结各类算法的局限性，并给出进一步的改",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "c1434d26-f2e4-4a51-9854-cb37623a6cd9",
+              "distance": 0.226286,
+              "similarity": 0.773714,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "标，但是缺乏对场景的\n细节描述( Ma 等，2019a) 。此外，具有不同ISO( in-\nternational organization for standardization) 和曝光时\n间的相机只能捕捉在其动态范围内的场景信息，而\n不可避免地丢失动态范围之外的信息。值得注意的\n是，不同类型或不同光学设置下的传感器通常包含\n大量互补信息，这也启发人们将这些互补信息集成\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n5\n到单一的图像中。因此，图像融合技术应运而生。\n根据成像设备/成像设置的差异，图像融合通常\n可以分为3 类，即多模图像融合、数字摄影图像融合\n和遥感影像融合。\n1) 多模图像融合。由于成像原理的限制，单一\n类型的传感器只能捕获部分场景信息。多模图像融\n合能够将多个传感器捕获的有用信息整合到单幅的\n融合图像中，以实现对场景有效且全面地表征。典\n型的多模图像融合包括红外和可见光图像融合以及\n医学图像融合。\n2) 数字摄影图像融合。由于光学器件的限制，\n数码相机通常无法在单一设置下收集成像场景中的\n所有信息。具体来",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "613e945d-edb3-4a55-9db6-3332ae01f716",
+              "distance": 0.237135,
+              "similarity": 0.762865,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "neural network．Journal\nof Computer-Aided Design and Computer Graphics，28 ( 3 ) :\n411-419 ( 殷明，庞纪勇，魏远远，段普宏．2016．结合NSDTCT\n和压缩感知PCNN 的图像融合算法．计算机辅助设计与图形学\n学报，28 ( 3 ) : 411-419)\n［DOI: 10．3969 /j．issn．1003-9775．\n2016．03．005］\nYu L X，Cui Q，Che J，Xu Y L，Zhang F and Li F．2022．Image fusion\nmodel based on structure reparameterization method and spatial\nattention mechanism．Application Ｒesearch of Computers，39( 5) :\n1573-1578，1600 ( 俞利新，崔祺，车军，许悦雷，张凡，李帆．\n2022．结合结构重参数化方法与空间注意力机制的图像融合模\n型．计算机应用研究，39 ( 5) : 1573-1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6161a42b-5afa-415a-9f44-e8285773b787",
+              "distance": 0.237584,
+              "similarity": 0.762416,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "mplementary metal oxide semiconductor) 等元件记\n录场景信息，但是由于动态范围有限，CCD 和CMOS\n等元件无法承受过大的曝光差异。因此，在曝光差\n异过大时，单幅图像无法准确呈现场景中的所有细\n节信息。此外，受光学镜头景深限制的影响，数码相\n机很难在一幅图像内保证场景中所有目标都在景深\n范围内。然而只有在景深范围内的物体才能在图像\n中清晰地呈现，景深外的物体将变得模糊不清。数\n字摄影图像融合旨在将不同光学设置下拍摄的多幅\n图像组合在一起，并生成具有高动态范围的全聚焦\n图像，这是解决上述难题的不二之选。\n1. 2. 1\n多曝光图像融合\n通常成像场景中存在较大的光照变化，此时由\n于传感器捕获的动态范围有限，单一光学设置下拍\n摄的数字图像会因过度曝光或曝光不足而不可避免\n地丢失场景信息。多曝光图像融合能够将不同曝光\n程度图像中的有效信息整合起来并产生曝光合适、\n场景信息丰富的融合图像。本文通过介绍基于\nCNN 和基于GAN 的多曝光图像融合框架，回顾基\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "7222a01a-0ed7-4972-9443-a4536f51e6e3",
+              "distance": 0.2406,
+              "similarity": 0.7594,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤波和改进PCNN 的NSST 域多光谱与全色图像\n融合．中国图象图形学报，24( 3) : 435-446) ［DOI: 10．11834 /\njig．180399］\nJung H，Kim Y，Jang H，Ha N and Sohn K．2020．Unsupervised deep\nimage fusion with structure tensor representations．IEEE Transac-\ntions on Image Processing，29: 3845-3858 ［DOI: 10．1109 /TIP．\n2020．2966075］\nLahoud F and Süsstrunk S．2019．\nZero-learning fast medical image\nfusion / /Proceedings of the 22nd International Conference on Infor-\nmatio",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "54b1e77a-a5e3-40f6-9a94-93fb03e913f9",
+              "distance": 0.246173,
+              "similarity": 0.753827,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "tion School，Wuhan University，Wuhan\n430072，China\nAbstract: Image fusion aims to integrate complementary information from multi-source images into a single fused image to\ncharacterize the imaging scene and facilitate the subsequent vision tasks further. In recent years，it has been a concern in\nthe field of image processing，especially in artificial intelligence-related industries like intelligent medical service，autono-\nmous driving，smart photography，security surveillance，and military monitoring. M",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bbbc951b-8cea-4921-bda5-a7f4381eda75",
+              "distance": 0.246434,
+              "similarity": 0.753566,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Multimedia．\nChengdu，China: Association for Computing Machinery: 1600-1608\n［DOI: 10．1145 /3474085．3475299］\nLiu X B，Mei W B and Du H Q．2017a．Structure tensor and nonsub-\nsampled shearlet transform based algorithm for CT and MＲI image\nfusion．Neurocomputing，235: 131-139 ［DOI: 10．1016 /j．neu-\ncom．2017．01．006］\nLiu X Y，Liu Q J and Wang Y H．2020．Ｒemote sensing image fusion\nbased on two-stream fusion network．Information Fusion，55: 1-15\n［DOI: 10．1016 /j．inffus．2019．07．010］\nLiu Y，Chen X，Cheng J and Peng",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.248027,
+              "similarity": 0.751973,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "b3758098-6ade-429f-a9c8-f2184e90b09d",
+              "distance": 0.2497,
+              "similarity": 0.7503,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: #5002412\n［DOI: 10．1109 /TIM．2020．3029360］\nLi J X，Guo X B，Lu G M，Zhang B，Xu Y，Wu F and Zhang D．\n2020c．DＲPL: deep regression pair learning for multi-focus image\nfusion．IEEE Transactions on Image Processing，29: 4816-4831\n［DOI: 10．1109 /TIP．2020．2976190］\nLi S T，Kang X D，Fang L Y，Hu J W and Yin H T．2017．Pixel-level\nimage fusion: a survey of the state of the art．Information Fusion，\n33: 100-112 ［DOI: 10．1016 /j．inffus．2016．05．004］\nLi Y and Wu X J．2014．Image fusion based on sparse",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 12,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 12,
+          "expected_keyword_summary": {
+            "matched_keywords": [
+              "运行效率"
+            ],
+            "hit_count": 1,
+            "first_hit_rank": 1
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "网络架构",
+              "监督范式",
+              "评估指标",
+              "运行效率"
+            ],
+            "hit_count": 4,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1928f827-d9f0-4a89-b69b-958ef4db06a4",
+              "distance": 0.195507,
+              "similarity": 0.804493,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个角度详细阐述了各类方法的基本思想并讨论\n了各类方法的特点，同时针对现有算法的局限性，提\n出了进一步的改进方向。此外，为了方便相关人员\n开展研究，详尽介绍了不同融合任务中常用的数据\n集和评估指标。对每一类融合任务，从定性评估、定\n量评估以及运行效率等多个角度分析了代表性方法\n的性能。\n尽管深度学习在图像融合领域取得了巨大成\n功，但仍存在一些严峻挑战和难题。\n1) 未配准图像融合。现有图像融合算法均要\n求源图像在空间上是严格对齐的。然而在实际应用\n中，由于镜头畸变、尺度差异、视差以及拍摄位置的\n影响，无论是不同传感器拍摄的图像还是数码相机\n在不同设置下拍摄的图像都无法实现严格的空间对\n齐。通常情况下，需要使用成熟的图像配准算法或\n手工标注在融合前配准源图像( Jiang 等，2021) 。已\n有的配准算法能够成功配准相同模态的图像，但对\n于多模图像，尚未有对大规模多模图像鲁棒的配准\n算法。事实上，多模图像融合能够削弱多模数据中\n的模",
+              "keyword_hit": true,
+              "matched_keywords": [
+                "运行效率"
+              ]
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6ee783b4-5890-4e90-ae73-3d5b23c6e1bb",
+              "distance": 0.205196,
+              "similarity": 0.794804,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "项目( 2020BAB113)\nSupported by: National Natural Science Foundation of China ( 62276192) ; Natural Science Foundation of Hubei Province，China ( 2020BAB113)\n基于深度学习的图像融合方法综述\n唐霖峰，张浩，徐涵，马佳义\n*\n武汉大学电子信息学院，武汉\n430072\n摘\n要:\n图像融合技术旨在将不同源图像中的互补信息整合到单幅融合图像中以全面表征成像场景，并促进后\n续的视觉任务。随着深度学习的兴起，基于深度学习的图像融合算法如雨后春笋般涌现，特别是自编码器、生成对\n抗网络以及Transformer 等技术的出现使图像融合性能产生了质的飞跃。本文对不同融合任务场景下的前沿深度\n融合算法进行全面论述和分析。首先，介绍图像融合的基本概念以及不同融合场景的定义。针对多模图像融合、\n数字摄影图像融合以及遥感影像融合等不同的融合场景，从网络架构和监督范式等角度全面阐述各类方法的基本\n思想，并讨论各类方法的特点。其次，总结各类算法的局限性，并给出进一步的改",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "c1434d26-f2e4-4a51-9854-cb37623a6cd9",
+              "distance": 0.226286,
+              "similarity": 0.773714,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "标，但是缺乏对场景的\n细节描述( Ma 等，2019a) 。此外，具有不同ISO( in-\nternational organization for standardization) 和曝光时\n间的相机只能捕捉在其动态范围内的场景信息，而\n不可避免地丢失动态范围之外的信息。值得注意的\n是，不同类型或不同光学设置下的传感器通常包含\n大量互补信息，这也启发人们将这些互补信息集成\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n5\n到单一的图像中。因此，图像融合技术应运而生。\n根据成像设备/成像设置的差异，图像融合通常\n可以分为3 类，即多模图像融合、数字摄影图像融合\n和遥感影像融合。\n1) 多模图像融合。由于成像原理的限制，单一\n类型的传感器只能捕获部分场景信息。多模图像融\n合能够将多个传感器捕获的有用信息整合到单幅的\n融合图像中，以实现对场景有效且全面地表征。典\n型的多模图像融合包括红外和可见光图像融合以及\n医学图像融合。\n2) 数字摄影图像融合。由于光学器件的限制，\n数码相机通常无法在单一设置下收集成像场景中的\n所有信息。具体来",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "613e945d-edb3-4a55-9db6-3332ae01f716",
+              "distance": 0.237135,
+              "similarity": 0.762865,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "neural network．Journal\nof Computer-Aided Design and Computer Graphics，28 ( 3 ) :\n411-419 ( 殷明，庞纪勇，魏远远，段普宏．2016．结合NSDTCT\n和压缩感知PCNN 的图像融合算法．计算机辅助设计与图形学\n学报，28 ( 3 ) : 411-419)\n［DOI: 10．3969 /j．issn．1003-9775．\n2016．03．005］\nYu L X，Cui Q，Che J，Xu Y L，Zhang F and Li F．2022．Image fusion\nmodel based on structure reparameterization method and spatial\nattention mechanism．Application Ｒesearch of Computers，39( 5) :\n1573-1578，1600 ( 俞利新，崔祺，车军，许悦雷，张凡，李帆．\n2022．结合结构重参数化方法与空间注意力机制的图像融合模\n型．计算机应用研究，39 ( 5) : 1573-1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "6161a42b-5afa-415a-9f44-e8285773b787",
+              "distance": 0.237584,
+              "similarity": 0.762416,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "mplementary metal oxide semiconductor) 等元件记\n录场景信息，但是由于动态范围有限，CCD 和CMOS\n等元件无法承受过大的曝光差异。因此，在曝光差\n异过大时，单幅图像无法准确呈现场景中的所有细\n节信息。此外，受光学镜头景深限制的影响，数码相\n机很难在一幅图像内保证场景中所有目标都在景深\n范围内。然而只有在景深范围内的物体才能在图像\n中清晰地呈现，景深外的物体将变得模糊不清。数\n字摄影图像融合旨在将不同光学设置下拍摄的多幅\n图像组合在一起，并生成具有高动态范围的全聚焦\n图像，这是解决上述难题的不二之选。\n1. 2. 1\n多曝光图像融合\n通常成像场景中存在较大的光照变化，此时由\n于传感器捕获的动态范围有限，单一光学设置下拍\n摄的数字图像会因过度曝光或曝光不足而不可避免\n地丢失场景信息。多曝光图像融合能够将不同曝光\n程度图像中的有效信息整合起来并产生曝光合适、\n场景信息丰富的融合图像。本文通过介绍基于\nCNN 和基于GAN 的多曝光图像融合框架，回顾基\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "7222a01a-0ed7-4972-9443-a4536f51e6e3",
+              "distance": 0.2406,
+              "similarity": 0.7594,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤波和改进PCNN 的NSST 域多光谱与全色图像\n融合．中国图象图形学报，24( 3) : 435-446) ［DOI: 10．11834 /\njig．180399］\nJung H，Kim Y，Jang H，Ha N and Sohn K．2020．Unsupervised deep\nimage fusion with structure tensor representations．IEEE Transac-\ntions on Image Processing，29: 3845-3858 ［DOI: 10．1109 /TIP．\n2020．2966075］\nLahoud F and Süsstrunk S．2019．\nZero-learning fast medical image\nfusion / /Proceedings of the 22nd International Conference on Infor-\nmatio",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "54b1e77a-a5e3-40f6-9a94-93fb03e913f9",
+              "distance": 0.246173,
+              "similarity": 0.753827,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "tion School，Wuhan University，Wuhan\n430072，China\nAbstract: Image fusion aims to integrate complementary information from multi-source images into a single fused image to\ncharacterize the imaging scene and facilitate the subsequent vision tasks further. In recent years，it has been a concern in\nthe field of image processing，especially in artificial intelligence-related industries like intelligent medical service，autono-\nmous driving，smart photography，security surveillance，and military monitoring. M",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bbbc951b-8cea-4921-bda5-a7f4381eda75",
+              "distance": 0.246434,
+              "similarity": 0.753566,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Multimedia．\nChengdu，China: Association for Computing Machinery: 1600-1608\n［DOI: 10．1145 /3474085．3475299］\nLiu X B，Mei W B and Du H Q．2017a．Structure tensor and nonsub-\nsampled shearlet transform based algorithm for CT and MＲI image\nfusion．Neurocomputing，235: 131-139 ［DOI: 10．1016 /j．neu-\ncom．2017．01．006］\nLiu X Y，Liu Q J and Wang Y H．2020．Ｒemote sensing image fusion\nbased on two-stream fusion network．Information Fusion，55: 1-15\n［DOI: 10．1016 /j．inffus．2019．07．010］\nLiu Y，Chen X，Cheng J and Peng",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.248027,
+              "similarity": 0.751973,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "b3758098-6ade-429f-a9c8-f2184e90b09d",
+              "distance": 0.2497,
+              "similarity": 0.7503,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: #5002412\n［DOI: 10．1109 /TIM．2020．3029360］\nLi J X，Guo X B，Lu G M，Zhang B，Xu Y，Wu F and Zhang D．\n2020c．DＲPL: deep regression pair learning for multi-focus image\nfusion．IEEE Transactions on Image Processing，29: 4816-4831\n［DOI: 10．1109 /TIP．2020．2976190］\nLi S T，Kang X D，Fang L Y，Hu J W and Yin H T．2017．Pixel-level\nimage fusion: a survey of the state of the art．Information Fusion，\n33: 100-112 ［DOI: 10．1016 /j．inffus．2016．05．004］\nLi Y and Wu X J．2014．Image fusion based on sparse",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 11,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "d9284ce0-4cbf-435f-b0f7-fce21c2caf52",
+              "distance": 0.255761,
+              "similarity": 0.744239,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": ". 018\nAGAL\n0. 120 ± 0. 087\nIFCNN\n0. 030 ±0. 055\nU2Fusion\n0. 841 ± 0. 790\n多聚焦图像融合\nDＲPL\n0. 099 ± 0. 074\nSESF-Fuse\n0. 240 ± 0. 068\nMFF-GAN\n0. 081 ± 0. 261\nMFIF-GAN\n3. 894 ± 1. 762\nIFCNN\n0. 024 ±0. 055\nU2Fusion\n0. 413 ± 0. 577\n多光谱与全色图像融合\nPNN\n0. 060 ± 0. 026\nPanNet\n0. 022 ± 0. 161\nSDPNet\n0. 206 ± 0. 272\nGTP-PNet\n0. 023 ± 0. 119\nPan-GAN\n0. 093 ± 0. 041\nPSGAN\n0. 010 ±0. 008\n注: 加粗字体表示各类方法中各列最优结果，下划线表示次\n优结果。\n的图像融合研究的发展脉络，本文综合分析了图像\n融合领域最前沿的基于深度学习的图像融合算法。\n\nVol．28，No．1，Jan．2023\n28\n结合具体的融合场景，本文从网络架构和监督范式\n等多个",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 12,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "d144a4e3-5d1b-4818-87a1-1194d3d9fd18",
+              "distance": 0.25621,
+              "similarity": 0.74379,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "融合框架的性能。\n2) 基于卷积神经网络( CNN) 的图像融合框架\n通过设计网络结构和损失函数来实现端到端的特征\n提取、特征融合和图像重建，从而避免手动设计融合\n规则的烦琐( Ma 等，2021c) 。图2( b) 是一种主流的\n基于CNN 的图像融合框架，通过度量融合图像与源\n图像之间的相似性来构造损失函数，指导网络进行\n端到端训练( Han 等，2022) 。也有方法利用先验知\n识设计一个伪标签图像与融合图像构造损失函数\n( Deng 等，2021) 。此外，有部分基于CNN 的方法将\n卷积神经网络作为整体方法的一部分用于特征提取\n或活动水平测量( Liu 等，2017c) 。\n3) 基于生成对抗网络( GAN) 的图像融合框架\n将图像融合问题建模为生成器与判别器之间的对抗\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n7\n博弈问题。如图2( c) 所示，基于GAN 的图像融合\n框架通过判别器来迫使生成器生成的融合结果在概\n率分布上与目标分布趋于一致，从而隐式地实现特\n征提取、融合和图像重建。现有基于GAN 的融合方\n法",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        }
+      ],
+      "query_embedding_dimension": 768
+    },
+    {
+      "case_id": "paper004_q008",
+      "paper_id": "paper004",
+      "paper_title": "基于深度学习的图像融合方法综述",
+      "question": "作者根据综述分析给出了什么结论或建议？",
+      "expected_keywords": [
+        "深度学习图像融合",
+        "不同场景",
+        "监督范式",
+        "算法局限性",
+        "研究建议",
+        "后续研究"
+      ],
+      "focus_keywords": [
+        "conclusion",
+        "future work",
+        "challenge",
+        "suggestion",
+        "后续研究",
+        "算法局限性",
+        "研究建议",
+        "不同场景"
+      ],
+      "fail_reason": "retrieval_context_weak",
+      "initial_assessment": "结论/建议类检索问题",
+      "target_document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+      "target_file_name": "基于深度学习的图像融合方法综述_唐霖峰.pdf",
+      "used_document_filter": true,
+      "runs": [
+        {
+          "params": {
+            "top_k": 6,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 6,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "conclusion",
+              "challenge"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "73a9feb5-6bcb-4ff7-8599-9e348252286d",
+              "distance": 0.565323,
+              "similarity": 0.434677,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "fusion missions. Finally，this review has critically analyzed the conclusion，highlights the challenges in the\nimage fusion community，and carried out forecasting analysis，such as non-registered image fusion，high-level vision task-\ndriven image fusion，cross-resolution image fusion，real-time image fusion，color image fusion，image fusion based on phys-\nical imaging principles，image fusion under extreme conditions，and comprehensive evaluation metrics，etc. The methods，\ndatasets，and evaluation metrics m",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "38d56ef0-24f7-454f-9e35-5eef3e190c8a",
+              "distance": 0.567076,
+              "similarity": 0.432924,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "pplications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J and Liu Z．2013．Directive contrast based mul-\ntimodal medical image fusion in NSCT domain．IEEE Transactions\non Multimedia，15( 5) : 1014-1024 ［DOI: 10．1109 /TMM．2013．\n2244870］\nCai J J and Huang B．2021．Super-resolution-guided progressive pan-\nsharpening based on a deep convolutional neural network．\nIEEE\nTransactions on\nGeoscience\nand\nＲemote\nSensing，59 ( 6 ) :\n5206-5220 ［DOI: 10．1109 /TGＲS．2020．3015878］\nCai J Ｒ，Gu S H a",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.568234,
+              "similarity": 0.431766,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "a1688fe1-e5fe-47d6-b6d2-c7f83f2818d1",
+              "distance": 0.569569,
+              "similarity": 0.430431,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "ensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X，Jiang J J and Ma J Y．2021b．Image fusion\nmeets deep learning: a survey and perspective．Information Fusion，\n76: 323-336 ［DOI: 10．1016 /j．inffus．2021．06．008］\nZhang H，Xu H，Xiao Y，Guo X J and Ma J Y．2020b．Ｒethinking the\nimage fusion: A fast unified image fusion network based on propor-\ntional maintenance of gradient and intensity．Proceedings of 2020\nAAAI Conference on Artificial Intelligence，34 ( 7) : 12797-12804\n［DOI: 1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bc31e451-3783-4622-b019-8c4c0dc1cf46",
+              "distance": 0.569898,
+              "similarity": 0.430102,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "，进一步保证了融合性能的提升。Zhang\n( 2022) 认为只约束融合结果与参考图像的一致性\n无法有效利用全色图像中的空间信息，且会因为空\n间结构缺乏显式约束引发光谱与空间信息的不平\n衡，为此提出了GTP-PNet ( gradient transformation\nprior for pansharpening network) ，使用特定的TNet 拟\n合光谱退化过程，在梯度域中建立了更加准确的多\n光谱与全色图像的非线性回归关系，并将此非线性\n回归关系作为一种先验来约束空间结构的保留，从\n而保障光谱与空间信息的平衡。然而有监督的多光\n谱与全色图像融合方法本质上是学习输入图像到参\n考图像的非线性映射，实际性能很大程度上依赖于\n参考图像构建的合理性。在有监督方法中，参考图\n像的构建遵循Wald 协议，该协议将全分辨率多光\n谱与全色图像进行空间下采样，得到降分辨率数\n据并作为网络的输入，而将原始的全分辨率多光\n谱图像作为参考图像监督网络的优化。这种策略\n可能会从两方面限制有监督方法的性能。一方\n面，采取的空间退化模式可能与真实的遥感数据\n退化模式不一致，使网络学到的映射关系无法推\n广到",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "60d2123c-b812-4ada-8179-626a6c58f1f1",
+              "distance": 0.575466,
+              "similarity": 0.424534,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "019．02．003］\nAslantas V and Bendes E．2015．A new image quality metric for image\nfusion: the sum of the correlations of differences．AEU-International\nJournal of Electronics and Communications，69 ( 12) : 1890-1896\n［DOI: 10．1016 /j．aeue．2015．09．004］\nBenzenati T，Kessentini Y and Kallel A．2022．Pansharpening approach\nvia two-stream detail injection based on relativistic generative adver-\nsarial networks．Expert Systems with Applications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 8,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 8,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "conclusion",
+              "challenge"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "73a9feb5-6bcb-4ff7-8599-9e348252286d",
+              "distance": 0.565323,
+              "similarity": 0.434677,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "fusion missions. Finally，this review has critically analyzed the conclusion，highlights the challenges in the\nimage fusion community，and carried out forecasting analysis，such as non-registered image fusion，high-level vision task-\ndriven image fusion，cross-resolution image fusion，real-time image fusion，color image fusion，image fusion based on phys-\nical imaging principles，image fusion under extreme conditions，and comprehensive evaluation metrics，etc. The methods，\ndatasets，and evaluation metrics m",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "38d56ef0-24f7-454f-9e35-5eef3e190c8a",
+              "distance": 0.567076,
+              "similarity": 0.432924,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "pplications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J and Liu Z．2013．Directive contrast based mul-\ntimodal medical image fusion in NSCT domain．IEEE Transactions\non Multimedia，15( 5) : 1014-1024 ［DOI: 10．1109 /TMM．2013．\n2244870］\nCai J J and Huang B．2021．Super-resolution-guided progressive pan-\nsharpening based on a deep convolutional neural network．\nIEEE\nTransactions on\nGeoscience\nand\nＲemote\nSensing，59 ( 6 ) :\n5206-5220 ［DOI: 10．1109 /TGＲS．2020．3015878］\nCai J Ｒ，Gu S H a",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.568234,
+              "similarity": 0.431766,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "a1688fe1-e5fe-47d6-b6d2-c7f83f2818d1",
+              "distance": 0.569569,
+              "similarity": 0.430431,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "ensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X，Jiang J J and Ma J Y．2021b．Image fusion\nmeets deep learning: a survey and perspective．Information Fusion，\n76: 323-336 ［DOI: 10．1016 /j．inffus．2021．06．008］\nZhang H，Xu H，Xiao Y，Guo X J and Ma J Y．2020b．Ｒethinking the\nimage fusion: A fast unified image fusion network based on propor-\ntional maintenance of gradient and intensity．Proceedings of 2020\nAAAI Conference on Artificial Intelligence，34 ( 7) : 12797-12804\n［DOI: 1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bc31e451-3783-4622-b019-8c4c0dc1cf46",
+              "distance": 0.569898,
+              "similarity": 0.430102,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "，进一步保证了融合性能的提升。Zhang\n( 2022) 认为只约束融合结果与参考图像的一致性\n无法有效利用全色图像中的空间信息，且会因为空\n间结构缺乏显式约束引发光谱与空间信息的不平\n衡，为此提出了GTP-PNet ( gradient transformation\nprior for pansharpening network) ，使用特定的TNet 拟\n合光谱退化过程，在梯度域中建立了更加准确的多\n光谱与全色图像的非线性回归关系，并将此非线性\n回归关系作为一种先验来约束空间结构的保留，从\n而保障光谱与空间信息的平衡。然而有监督的多光\n谱与全色图像融合方法本质上是学习输入图像到参\n考图像的非线性映射，实际性能很大程度上依赖于\n参考图像构建的合理性。在有监督方法中，参考图\n像的构建遵循Wald 协议，该协议将全分辨率多光\n谱与全色图像进行空间下采样，得到降分辨率数\n据并作为网络的输入，而将原始的全分辨率多光\n谱图像作为参考图像监督网络的优化。这种策略\n可能会从两方面限制有监督方法的性能。一方\n面，采取的空间退化模式可能与真实的遥感数据\n退化模式不一致，使网络学到的映射关系无法推\n广到",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "60d2123c-b812-4ada-8179-626a6c58f1f1",
+              "distance": 0.575466,
+              "similarity": 0.424534,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "019．02．003］\nAslantas V and Bendes E．2015．A new image quality metric for image\nfusion: the sum of the correlations of differences．AEU-International\nJournal of Electronics and Communications，69 ( 12) : 1890-1896\n［DOI: 10．1016 /j．aeue．2015．09．004］\nBenzenati T，Kessentini Y and Kallel A．2022．Pansharpening approach\nvia two-stream detail injection based on relativistic generative adver-\nsarial networks．Expert Systems with Applications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "0f04bfa7-62f0-485d-855e-0b8a0a573552",
+              "distance": 0.583981,
+              "similarity": 0.416019,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "lti-\nspectral classification．Journal of Applied Ｒemote Sensing，2( 1) :\n#023522 ［DOI: 10．1117 /1．2945910］\nＲonneberger O，Fischer P and Brox T．2015．U-net: convolutional net-\nworks for biomedical image segmentation / /Proceedings of the 18th\nInternational Conference on Medical Image Computing and Comput-\ner-assisted Intervention．\nMunich，Germany:\nSpringer:\n234-241\n［DOI: 10．1007 /978-3-319-24574-4_28］\nSeo S，Choi J S，Lee J，Kim H H，Seo D，Jeong J and Kim M．2020．\nUPSNet:\nunsupervised pan-sharpening networ",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1edc1c06-a918-46de-83fb-5d951855f481",
+              "distance": 0.585159,
+              "similarity": 0.414841,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Instrumentation and Meas-\nurement，70: 1-13 ［DOI: 10．1109 /TIM．2021．3075747］\nMa J Y，Xu H，Jiang J J，Mei X G and Zhang X P．2020c．DDcGAN:\na dual-discriminator conditional generative adversarial network for\nmulti-resolution image fusion．IEEE Transactions on Image Process-\ning，29: 4980-4995 ［DOI: 10．1109 /TIP．2020．2977573］\nMa J Y，Yu W，Chen C，Liang P W，Guo X J and Jiang J J．2020d．\nPan-GAN: an unsupervised pan-sharpening method for remote sens-\ning image fusion．Information Fusion，62: 110-120 ［DOI: 10．",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.25
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "conclusion",
+              "challenge"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "73a9feb5-6bcb-4ff7-8599-9e348252286d",
+              "distance": 0.565323,
+              "similarity": 0.434677,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "fusion missions. Finally，this review has critically analyzed the conclusion，highlights the challenges in the\nimage fusion community，and carried out forecasting analysis，such as non-registered image fusion，high-level vision task-\ndriven image fusion，cross-resolution image fusion，real-time image fusion，color image fusion，image fusion based on phys-\nical imaging principles，image fusion under extreme conditions，and comprehensive evaluation metrics，etc. The methods，\ndatasets，and evaluation metrics m",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "38d56ef0-24f7-454f-9e35-5eef3e190c8a",
+              "distance": 0.567076,
+              "similarity": 0.432924,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "pplications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J and Liu Z．2013．Directive contrast based mul-\ntimodal medical image fusion in NSCT domain．IEEE Transactions\non Multimedia，15( 5) : 1014-1024 ［DOI: 10．1109 /TMM．2013．\n2244870］\nCai J J and Huang B．2021．Super-resolution-guided progressive pan-\nsharpening based on a deep convolutional neural network．\nIEEE\nTransactions on\nGeoscience\nand\nＲemote\nSensing，59 ( 6 ) :\n5206-5220 ［DOI: 10．1109 /TGＲS．2020．3015878］\nCai J Ｒ，Gu S H a",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.568234,
+              "similarity": 0.431766,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "a1688fe1-e5fe-47d6-b6d2-c7f83f2818d1",
+              "distance": 0.569569,
+              "similarity": 0.430431,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "ensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X，Jiang J J and Ma J Y．2021b．Image fusion\nmeets deep learning: a survey and perspective．Information Fusion，\n76: 323-336 ［DOI: 10．1016 /j．inffus．2021．06．008］\nZhang H，Xu H，Xiao Y，Guo X J and Ma J Y．2020b．Ｒethinking the\nimage fusion: A fast unified image fusion network based on propor-\ntional maintenance of gradient and intensity．Proceedings of 2020\nAAAI Conference on Artificial Intelligence，34 ( 7) : 12797-12804\n［DOI: 1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bc31e451-3783-4622-b019-8c4c0dc1cf46",
+              "distance": 0.569898,
+              "similarity": 0.430102,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "，进一步保证了融合性能的提升。Zhang\n( 2022) 认为只约束融合结果与参考图像的一致性\n无法有效利用全色图像中的空间信息，且会因为空\n间结构缺乏显式约束引发光谱与空间信息的不平\n衡，为此提出了GTP-PNet ( gradient transformation\nprior for pansharpening network) ，使用特定的TNet 拟\n合光谱退化过程，在梯度域中建立了更加准确的多\n光谱与全色图像的非线性回归关系，并将此非线性\n回归关系作为一种先验来约束空间结构的保留，从\n而保障光谱与空间信息的平衡。然而有监督的多光\n谱与全色图像融合方法本质上是学习输入图像到参\n考图像的非线性映射，实际性能很大程度上依赖于\n参考图像构建的合理性。在有监督方法中，参考图\n像的构建遵循Wald 协议，该协议将全分辨率多光\n谱与全色图像进行空间下采样，得到降分辨率数\n据并作为网络的输入，而将原始的全分辨率多光\n谱图像作为参考图像监督网络的优化。这种策略\n可能会从两方面限制有监督方法的性能。一方\n面，采取的空间退化模式可能与真实的遥感数据\n退化模式不一致，使网络学到的映射关系无法推\n广到",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "60d2123c-b812-4ada-8179-626a6c58f1f1",
+              "distance": 0.575466,
+              "similarity": 0.424534,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "019．02．003］\nAslantas V and Bendes E．2015．A new image quality metric for image\nfusion: the sum of the correlations of differences．AEU-International\nJournal of Electronics and Communications，69 ( 12) : 1890-1896\n［DOI: 10．1016 /j．aeue．2015．09．004］\nBenzenati T，Kessentini Y and Kallel A．2022．Pansharpening approach\nvia two-stream detail injection based on relativistic generative adver-\nsarial networks．Expert Systems with Applications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "0f04bfa7-62f0-485d-855e-0b8a0a573552",
+              "distance": 0.583981,
+              "similarity": 0.416019,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "lti-\nspectral classification．Journal of Applied Ｒemote Sensing，2( 1) :\n#023522 ［DOI: 10．1117 /1．2945910］\nＲonneberger O，Fischer P and Brox T．2015．U-net: convolutional net-\nworks for biomedical image segmentation / /Proceedings of the 18th\nInternational Conference on Medical Image Computing and Comput-\ner-assisted Intervention．\nMunich，Germany:\nSpringer:\n234-241\n［DOI: 10．1007 /978-3-319-24574-4_28］\nSeo S，Choi J S，Lee J，Kim H H，Seo D，Jeong J and Kim M．2020．\nUPSNet:\nunsupervised pan-sharpening networ",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1edc1c06-a918-46de-83fb-5d951855f481",
+              "distance": 0.585159,
+              "similarity": 0.414841,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Instrumentation and Meas-\nurement，70: 1-13 ［DOI: 10．1109 /TIM．2021．3075747］\nMa J Y，Xu H，Jiang J J，Mei X G and Zhang X P．2020c．DDcGAN:\na dual-discriminator conditional generative adversarial network for\nmulti-resolution image fusion．IEEE Transactions on Image Process-\ning，29: 4980-4995 ［DOI: 10．1109 /TIP．2020．2977573］\nMa J Y，Yu W，Chen C，Liang P W，Guo X J and Jiang J J．2020d．\nPan-GAN: an unsupervised pan-sharpening method for remote sens-\ning image fusion．Information Fusion，62: 110-120 ［DOI: 10．",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "3f022e67-4f39-49b5-96b8-35da90b3e9db",
+              "distance": 0.585733,
+              "similarity": 0.414267,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "］\nLou J Q，Li J F and Dai W Z．2017．Medical image fusion using non-\nsubsampled shearlet transform．\nJournal of Image and Graphics，\n22( 11) : 1574-1583 ( 楼建强，李俊峰，戴文战．2017．非下采\n样剪切波变换的医学图像融合．中国图象图形学报，22( 11) :\n1574-1583) ［DOI: 10．11834 /jig．170014］\nLuo S Y，Zhou S B，Feng Y and Xie J G．2020．Pansharpening via\nunsupervised convolutional neural networks．IEEE Journal of Select-\ned Topics in Applied Earth Observations and Ｒemote Sensing，13:\n4295-4310 ［DOI: 10．1109 /JSTAＲS．2020．3008047］\nLuo X Q，Gao Y H，Wang A",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "ff5ab16b-3b19-42f1-90ce-3976b150c693",
+              "distance": 0.586654,
+              "similarity": 0.413346,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "．2020．12．014］\nZhang H and Ma J Y．2021b．SDNet: a versatile squeeze-and-decompo-\nsition network for real-time image fusion．International Journal of\nComputer Vision，129( 10) : 2761-2785 ［DOI: 10．1007 /s11263-\n021-01501-8］\nZhang H，Ma J Y，Chen C and Tian X．2020a．NDVI-Net: a fusion net-\nwork for generating high-resolution normalized difference vegetation\nindex in remote sensing．\nISPＲS Journal of Photogrammetry and\nＲemote Sensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 10,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 10,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "conclusion",
+              "challenge"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "73a9feb5-6bcb-4ff7-8599-9e348252286d",
+              "distance": 0.565323,
+              "similarity": 0.434677,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "fusion missions. Finally，this review has critically analyzed the conclusion，highlights the challenges in the\nimage fusion community，and carried out forecasting analysis，such as non-registered image fusion，high-level vision task-\ndriven image fusion，cross-resolution image fusion，real-time image fusion，color image fusion，image fusion based on phys-\nical imaging principles，image fusion under extreme conditions，and comprehensive evaluation metrics，etc. The methods，\ndatasets，and evaluation metrics m",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "38d56ef0-24f7-454f-9e35-5eef3e190c8a",
+              "distance": 0.567076,
+              "similarity": 0.432924,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "pplications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J and Liu Z．2013．Directive contrast based mul-\ntimodal medical image fusion in NSCT domain．IEEE Transactions\non Multimedia，15( 5) : 1014-1024 ［DOI: 10．1109 /TMM．2013．\n2244870］\nCai J J and Huang B．2021．Super-resolution-guided progressive pan-\nsharpening based on a deep convolutional neural network．\nIEEE\nTransactions on\nGeoscience\nand\nＲemote\nSensing，59 ( 6 ) :\n5206-5220 ［DOI: 10．1109 /TGＲS．2020．3015878］\nCai J Ｒ，Gu S H a",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.568234,
+              "similarity": 0.431766,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "a1688fe1-e5fe-47d6-b6d2-c7f83f2818d1",
+              "distance": 0.569569,
+              "similarity": 0.430431,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "ensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X，Jiang J J and Ma J Y．2021b．Image fusion\nmeets deep learning: a survey and perspective．Information Fusion，\n76: 323-336 ［DOI: 10．1016 /j．inffus．2021．06．008］\nZhang H，Xu H，Xiao Y，Guo X J and Ma J Y．2020b．Ｒethinking the\nimage fusion: A fast unified image fusion network based on propor-\ntional maintenance of gradient and intensity．Proceedings of 2020\nAAAI Conference on Artificial Intelligence，34 ( 7) : 12797-12804\n［DOI: 1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bc31e451-3783-4622-b019-8c4c0dc1cf46",
+              "distance": 0.569898,
+              "similarity": 0.430102,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "，进一步保证了融合性能的提升。Zhang\n( 2022) 认为只约束融合结果与参考图像的一致性\n无法有效利用全色图像中的空间信息，且会因为空\n间结构缺乏显式约束引发光谱与空间信息的不平\n衡，为此提出了GTP-PNet ( gradient transformation\nprior for pansharpening network) ，使用特定的TNet 拟\n合光谱退化过程，在梯度域中建立了更加准确的多\n光谱与全色图像的非线性回归关系，并将此非线性\n回归关系作为一种先验来约束空间结构的保留，从\n而保障光谱与空间信息的平衡。然而有监督的多光\n谱与全色图像融合方法本质上是学习输入图像到参\n考图像的非线性映射，实际性能很大程度上依赖于\n参考图像构建的合理性。在有监督方法中，参考图\n像的构建遵循Wald 协议，该协议将全分辨率多光\n谱与全色图像进行空间下采样，得到降分辨率数\n据并作为网络的输入，而将原始的全分辨率多光\n谱图像作为参考图像监督网络的优化。这种策略\n可能会从两方面限制有监督方法的性能。一方\n面，采取的空间退化模式可能与真实的遥感数据\n退化模式不一致，使网络学到的映射关系无法推\n广到",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "60d2123c-b812-4ada-8179-626a6c58f1f1",
+              "distance": 0.575466,
+              "similarity": 0.424534,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "019．02．003］\nAslantas V and Bendes E．2015．A new image quality metric for image\nfusion: the sum of the correlations of differences．AEU-International\nJournal of Electronics and Communications，69 ( 12) : 1890-1896\n［DOI: 10．1016 /j．aeue．2015．09．004］\nBenzenati T，Kessentini Y and Kallel A．2022．Pansharpening approach\nvia two-stream detail injection based on relativistic generative adver-\nsarial networks．Expert Systems with Applications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "0f04bfa7-62f0-485d-855e-0b8a0a573552",
+              "distance": 0.583981,
+              "similarity": 0.416019,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "lti-\nspectral classification．Journal of Applied Ｒemote Sensing，2( 1) :\n#023522 ［DOI: 10．1117 /1．2945910］\nＲonneberger O，Fischer P and Brox T．2015．U-net: convolutional net-\nworks for biomedical image segmentation / /Proceedings of the 18th\nInternational Conference on Medical Image Computing and Comput-\ner-assisted Intervention．\nMunich，Germany:\nSpringer:\n234-241\n［DOI: 10．1007 /978-3-319-24574-4_28］\nSeo S，Choi J S，Lee J，Kim H H，Seo D，Jeong J and Kim M．2020．\nUPSNet:\nunsupervised pan-sharpening networ",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1edc1c06-a918-46de-83fb-5d951855f481",
+              "distance": 0.585159,
+              "similarity": 0.414841,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Instrumentation and Meas-\nurement，70: 1-13 ［DOI: 10．1109 /TIM．2021．3075747］\nMa J Y，Xu H，Jiang J J，Mei X G and Zhang X P．2020c．DDcGAN:\na dual-discriminator conditional generative adversarial network for\nmulti-resolution image fusion．IEEE Transactions on Image Process-\ning，29: 4980-4995 ［DOI: 10．1109 /TIP．2020．2977573］\nMa J Y，Yu W，Chen C，Liang P W，Guo X J and Jiang J J．2020d．\nPan-GAN: an unsupervised pan-sharpening method for remote sens-\ning image fusion．Information Fusion，62: 110-120 ［DOI: 10．",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "3f022e67-4f39-49b5-96b8-35da90b3e9db",
+              "distance": 0.585733,
+              "similarity": 0.414267,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "］\nLou J Q，Li J F and Dai W Z．2017．Medical image fusion using non-\nsubsampled shearlet transform．\nJournal of Image and Graphics，\n22( 11) : 1574-1583 ( 楼建强，李俊峰，戴文战．2017．非下采\n样剪切波变换的医学图像融合．中国图象图形学报，22( 11) :\n1574-1583) ［DOI: 10．11834 /jig．170014］\nLuo S Y，Zhou S B，Feng Y and Xie J G．2020．Pansharpening via\nunsupervised convolutional neural networks．IEEE Journal of Select-\ned Topics in Applied Earth Observations and Ｒemote Sensing，13:\n4295-4310 ［DOI: 10．1109 /JSTAＲS．2020．3008047］\nLuo X Q，Gao Y H，Wang A",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "ff5ab16b-3b19-42f1-90ce-3976b150c693",
+              "distance": 0.586654,
+              "similarity": 0.413346,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "．2020．12．014］\nZhang H and Ma J Y．2021b．SDNet: a versatile squeeze-and-decompo-\nsition network for real-time image fusion．International Journal of\nComputer Vision，129( 10) : 2761-2785 ［DOI: 10．1007 /s11263-\n021-01501-8］\nZhang H，Ma J Y，Chen C and Tian X．2020a．NDVI-Net: a fusion net-\nwork for generating high-resolution normalized difference vegetation\nindex in remote sensing．\nISPＲS Journal of Photogrammetry and\nＲemote Sensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        },
+        {
+          "params": {
+            "top_k": 12,
+            "similarity_threshold": 0.2
+          },
+          "retrieved_count": 12,
+          "expected_keyword_summary": {
+            "matched_keywords": [],
+            "hit_count": 0,
+            "first_hit_rank": null
+          },
+          "focus_keyword_summary": {
+            "matched_keywords": [
+              "conclusion",
+              "challenge"
+            ],
+            "hit_count": 2,
+            "first_hit_rank": 1
+          },
+          "chunks": [
+            {
+              "rank": 1,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "73a9feb5-6bcb-4ff7-8599-9e348252286d",
+              "distance": 0.565323,
+              "similarity": 0.434677,
+              "page_number": 1,
+              "section_title": null,
+              "section_path": [],
+              "is_reference_section": false,
+              "content_preview": "fusion missions. Finally，this review has critically analyzed the conclusion，highlights the challenges in the\nimage fusion community，and carried out forecasting analysis，such as non-registered image fusion，high-level vision task-\ndriven image fusion，cross-resolution image fusion，real-time image fusion，color image fusion，image fusion based on phys-\nical imaging principles，image fusion under extreme conditions，and comprehensive evaluation metrics，etc. The methods，\ndatasets，and evaluation metrics m",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 2,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "38d56ef0-24f7-454f-9e35-5eef3e190c8a",
+              "distance": 0.567076,
+              "similarity": 0.432924,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "pplications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J and Liu Z．2013．Directive contrast based mul-\ntimodal medical image fusion in NSCT domain．IEEE Transactions\non Multimedia，15( 5) : 1014-1024 ［DOI: 10．1109 /TMM．2013．\n2244870］\nCai J J and Huang B．2021．Super-resolution-guided progressive pan-\nsharpening based on a deep convolutional neural network．\nIEEE\nTransactions on\nGeoscience\nand\nＲemote\nSensing，59 ( 6 ) :\n5206-5220 ［DOI: 10．1109 /TGＲS．2020．3015878］\nCai J Ｒ，Gu S H a",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 3,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "eac1d0b5-973a-45c0-8ef4-1dddca7585f5",
+              "distance": 0.568234,
+              "similarity": 0.431766,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "on and Measurement，70: 1-15 ［DOI: 10．1109 /TIM．\n2020．3022438］\nJiang X Y，Ma J Y，Xiao G B，Shao Z F and Guo X J．2021．A review\nof multimodal image matching: methods and applications．Informa-\n\n第28 卷/第1 期/2023 年1 月\n唐霖峰，张浩，徐涵，马佳义/ 基于深度学习的图像融合方法综述\n31\ntion Fusion，73: 22-71 ［DOI: 10．1016 /j．inffus．2021．02．012］\nJiao J and Wu L D．2019．Fusion of multispectral and panchromatic ima-\nges via morphological filter and improved PCNN in NSST domain．\nJournal of Image and Graphics，24( 3) : 435-446 ( 焦姣，吴玲达．\n2019．形态学滤",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 4,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "a1688fe1-e5fe-47d6-b6d2-c7f83f2818d1",
+              "distance": 0.569569,
+              "similarity": 0.430431,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "ensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X，Jiang J J and Ma J Y．2021b．Image fusion\nmeets deep learning: a survey and perspective．Information Fusion，\n76: 323-336 ［DOI: 10．1016 /j．inffus．2021．06．008］\nZhang H，Xu H，Xiao Y，Guo X J and Ma J Y．2020b．Ｒethinking the\nimage fusion: A fast unified image fusion network based on propor-\ntional maintenance of gradient and intensity．Proceedings of 2020\nAAAI Conference on Artificial Intelligence，34 ( 7) : 12797-12804\n［DOI: 1",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 5,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "bc31e451-3783-4622-b019-8c4c0dc1cf46",
+              "distance": 0.569898,
+              "similarity": 0.430102,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "，进一步保证了融合性能的提升。Zhang\n( 2022) 认为只约束融合结果与参考图像的一致性\n无法有效利用全色图像中的空间信息，且会因为空\n间结构缺乏显式约束引发光谱与空间信息的不平\n衡，为此提出了GTP-PNet ( gradient transformation\nprior for pansharpening network) ，使用特定的TNet 拟\n合光谱退化过程，在梯度域中建立了更加准确的多\n光谱与全色图像的非线性回归关系，并将此非线性\n回归关系作为一种先验来约束空间结构的保留，从\n而保障光谱与空间信息的平衡。然而有监督的多光\n谱与全色图像融合方法本质上是学习输入图像到参\n考图像的非线性映射，实际性能很大程度上依赖于\n参考图像构建的合理性。在有监督方法中，参考图\n像的构建遵循Wald 协议，该协议将全分辨率多光\n谱与全色图像进行空间下采样，得到降分辨率数\n据并作为网络的输入，而将原始的全分辨率多光\n谱图像作为参考图像监督网络的优化。这种策略\n可能会从两方面限制有监督方法的性能。一方\n面，采取的空间退化模式可能与真实的遥感数据\n退化模式不一致，使网络学到的映射关系无法推\n广到",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 6,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "60d2123c-b812-4ada-8179-626a6c58f1f1",
+              "distance": 0.575466,
+              "similarity": 0.424534,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "019．02．003］\nAslantas V and Bendes E．2015．A new image quality metric for image\nfusion: the sum of the correlations of differences．AEU-International\nJournal of Electronics and Communications，69 ( 12) : 1890-1896\n［DOI: 10．1016 /j．aeue．2015．09．004］\nBenzenati T，Kessentini Y and Kallel A．2022．Pansharpening approach\nvia two-stream detail injection based on relativistic generative adver-\nsarial networks．Expert Systems with Applications，188: #115996\n［DOI: 10．1016 /j．eswa．2021．115996］\nBhatnagar G，Wu Q M J",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 7,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "0f04bfa7-62f0-485d-855e-0b8a0a573552",
+              "distance": 0.583981,
+              "similarity": 0.416019,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "lti-\nspectral classification．Journal of Applied Ｒemote Sensing，2( 1) :\n#023522 ［DOI: 10．1117 /1．2945910］\nＲonneberger O，Fischer P and Brox T．2015．U-net: convolutional net-\nworks for biomedical image segmentation / /Proceedings of the 18th\nInternational Conference on Medical Image Computing and Comput-\ner-assisted Intervention．\nMunich，Germany:\nSpringer:\n234-241\n［DOI: 10．1007 /978-3-319-24574-4_28］\nSeo S，Choi J S，Lee J，Kim H H，Seo D，Jeong J and Kim M．2020．\nUPSNet:\nunsupervised pan-sharpening networ",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 8,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "1edc1c06-a918-46de-83fb-5d951855f481",
+              "distance": 0.585159,
+              "similarity": 0.414841,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "n Instrumentation and Meas-\nurement，70: 1-13 ［DOI: 10．1109 /TIM．2021．3075747］\nMa J Y，Xu H，Jiang J J，Mei X G and Zhang X P．2020c．DDcGAN:\na dual-discriminator conditional generative adversarial network for\nmulti-resolution image fusion．IEEE Transactions on Image Process-\ning，29: 4980-4995 ［DOI: 10．1109 /TIP．2020．2977573］\nMa J Y，Yu W，Chen C，Liang P W，Guo X J and Jiang J J．2020d．\nPan-GAN: an unsupervised pan-sharpening method for remote sens-\ning image fusion．Information Fusion，62: 110-120 ［DOI: 10．",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 9,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "3f022e67-4f39-49b5-96b8-35da90b3e9db",
+              "distance": 0.585733,
+              "similarity": 0.414267,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "］\nLou J Q，Li J F and Dai W Z．2017．Medical image fusion using non-\nsubsampled shearlet transform．\nJournal of Image and Graphics，\n22( 11) : 1574-1583 ( 楼建强，李俊峰，戴文战．2017．非下采\n样剪切波变换的医学图像融合．中国图象图形学报，22( 11) :\n1574-1583) ［DOI: 10．11834 /jig．170014］\nLuo S Y，Zhou S B，Feng Y and Xie J G．2020．Pansharpening via\nunsupervised convolutional neural networks．IEEE Journal of Select-\ned Topics in Applied Earth Observations and Ｒemote Sensing，13:\n4295-4310 ［DOI: 10．1109 /JSTAＲS．2020．3008047］\nLuo X Q，Gao Y H，Wang A",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 10,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "ff5ab16b-3b19-42f1-90ce-3976b150c693",
+              "distance": 0.586654,
+              "similarity": 0.413346,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "．2020．12．014］\nZhang H and Ma J Y．2021b．SDNet: a versatile squeeze-and-decompo-\nsition network for real-time image fusion．International Journal of\nComputer Vision，129( 10) : 2761-2785 ［DOI: 10．1007 /s11263-\n021-01501-8］\nZhang H，Ma J Y，Chen C and Tian X．2020a．NDVI-Net: a fusion net-\nwork for generating high-resolution normalized difference vegetation\nindex in remote sensing．\nISPＲS Journal of Photogrammetry and\nＲemote Sensing，168: 182-196 ［DOI: 10．1016 /j．isprsjprs．2020．\n08．010］\nZhang H，Xu H，Tian X",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 11,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "d66e563e-6796-486c-8226-7260962de289",
+              "distance": 0.587282,
+              "similarity": 0.412718,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "aging，7: 584-597\n［DOI: 10．1109 /TCI．2021．3083965］\nTang W，Liu Y，Zhang C，Cheng J，Peng H and Chen X．2019．Green\nfluorescent protein and phase-contrast image fusion via generative\nadversarial networks．Computational and Mathematical Methods in\nMedicine，2019: #5450373 ［DOI: 10．1155 /2019 /5450373］\n\nVol．28，No．1，Jan．2023\n34\nWang J M，Shao Z F，Huang X，Lu T and Zhang ＲQ．2022a．A dual-\npath fusion network for pan-sharpening．IEEE Transactions on Geo-\nscience and Ｒemote Sensing，60: 1-14 ［DOI: 10．1109 /TGＲS．\n202",
+              "keyword_hit": false,
+              "matched_keywords": []
+            },
+            {
+              "rank": 12,
+              "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+              "chunk_id": "2f539f79-1db5-46ad-a668-fe357d984fc1",
+              "distance": 0.587755,
+              "similarity": 0.412245,
+              "page_number": 7,
+              "section_title": "方法",
+              "section_path": [
+                "方法"
+              ],
+              "is_reference_section": false,
+              "content_preview": "Conference on Multimedia and Expo．\nShenzhen，China: IEEE: 1-6 ［DOI: 10．1109 /ICME51207．2021．\n9428212］\nLiang X C，Hu P Y，Zhang L G，Sun J G and Yin G S．2019．MCFNet:\nmulti-layer concatenation fusion network for medical images fusion．\nIEEE Sensors Journal，19( 16) : 7107-7119 ［DOI: 10．1109 /jsen．\n2019．2913281］\nLin T Y，Maire M，Belongie S，Hays J，Perona P，Ｒamanan D，Dollár P\nand Zitnick C L．2014．Microsoft COCO: common objects in con-\ntext/ /Proceedings of the 13th European Conference on Computer\nVision．Zu",
+              "keyword_hit": false,
+              "matched_keywords": []
+            }
+          ]
+        }
+      ],
+      "query_embedding_dimension": 768
+    }
+  ],
+  "errors": [],
+  "conclusion_rows": [
+    {
+      "case_id": "paper003_q007",
+      "问题类型": "真实实验结果检索问题",
+      "baseline 是否召回关键片段": "否",
+      "提高 top_k 是否改善": "是",
+      "降低 threshold 是否改善": "否",
+      "主要瓶颈": "top_k 偏小，相关片段在后排",
+      "下一步建议": "提高 top_k"
+    },
+    {
+      "case_id": "paper004_q002",
+      "问题类型": "prompt / eval keyword / retrieval 组织混合问题",
+      "baseline 是否召回关键片段": "部分",
+      "提高 top_k 是否改善": "否",
+      "降低 threshold 是否改善": "否",
+      "主要瓶颈": "检索已有概览片段，回答或 eval keyword 更可能是瓶颈",
+      "下一步建议": "eval keyword 调整"
+    },
+    {
+      "case_id": "paper004_q008",
+      "问题类型": "结论/建议类检索问题",
+      "baseline 是否召回关键片段": "部分",
+      "提高 top_k 是否改善": "否",
+      "降低 threshold 是否改善": "否",
+      "主要瓶颈": "结论挑战片段已召回，中文 eval keyword 与原文表述映射更可能是瓶颈",
+      "下一步建议": "eval keyword 调整"
+    }
+  ]
+}

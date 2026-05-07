@@ -1,0 +1,145 @@
+{
+  "files_read": [
+    "eval/results/baseline_fixed_20260503/rag_eval_result_5papers.jsonl",
+    "eval/results/baseline_fixed_20260503/rag_eval_badcases_5papers.jsonl",
+    "eval/results/heading_20260504/rag_eval_result_heading.jsonl",
+    "eval/results/heading_20260504/rag_eval_badcases_heading.jsonl",
+    "eval/results/comparison/fixed_vs_heading_compare.md",
+    "eval/results/comparison/fixed_vs_heading_compare.json"
+  ],
+  "migration_stats": {
+    "fixed_fail_heading_pass": {
+      "count": 5,
+      "cases": [
+        "paper001_q006",
+        "paper002_q001",
+        "paper003_q010",
+        "paper004_q001",
+        "paper004_q010"
+      ]
+    },
+    "fixed_pass_heading_fail": {
+      "count": 3,
+      "cases": [
+        "paper001_q004",
+        "paper001_q010",
+        "paper003_q005"
+      ]
+    },
+    "both_fail": {
+      "count": 13,
+      "cases": [
+        "paper001_q002",
+        "paper001_q007",
+        "paper002_q002",
+        "paper002_q004",
+        "paper002_q008",
+        "paper003_q007",
+        "paper004_q002",
+        "paper004_q005",
+        "paper004_q006",
+        "paper004_q007",
+        "paper004_q008",
+        "paper005_q007",
+        "paper005_q008"
+      ]
+    },
+    "both_pass": {
+      "count": 29,
+      "cases": [
+        "paper001_q001",
+        "paper001_q003",
+        "paper001_q005",
+        "paper001_q008",
+        "paper001_q009",
+        "paper002_q003",
+        "paper002_q005",
+        "paper002_q006",
+        "paper002_q007",
+        "paper002_q009",
+        "paper002_q010",
+        "paper003_q001",
+        "paper003_q002",
+        "paper003_q003",
+        "paper003_q004",
+        "paper003_q006",
+        "paper003_q008",
+        "paper003_q009",
+        "paper004_q003",
+        "paper004_q004",
+        "paper004_q009",
+        "paper005_q001",
+        "paper005_q002",
+        "paper005_q003",
+        "paper005_q004",
+        "paper005_q005",
+        "paper005_q006",
+        "paper005_q009",
+        "paper005_q010"
+      ]
+    }
+  },
+  "heading_failures_by_reason": {
+    "likely_eval_keyword_too_strict": [
+      "paper001_q002",
+      "paper001_q004",
+      "paper001_q007",
+      "paper002_q002",
+      "paper002_q004",
+      "paper004_q005",
+      "paper004_q006",
+      "paper004_q007",
+      "paper005_q007"
+    ],
+    "retrieval_context_weak": [
+      "paper001_q010",
+      "paper003_q007",
+      "paper004_q002",
+      "paper004_q008"
+    ],
+    "answer_keyword_mismatch": [
+      "paper002_q008",
+      "paper003_q005",
+      "paper005_q008"
+    ]
+  },
+  "retrieval_context_weak_analysis": {
+    "paper001_q010": {
+      "paper_id": "paper001",
+      "type": "no-answer",
+      "diagnosis": "Correct refusal, but evaluator no-evidence phrase/context logic failed.",
+      "preferred_next_step": "eval keyword/no-answer rule adjustment"
+    },
+    "paper003_q007": {
+      "paper_id": "paper003",
+      "type": "experiment/result",
+      "diagnosis": "Context covers part of experiment section but misses comparison conclusion with 5.24% and 68.25 seconds.",
+      "preferred_next_step": "rerank, query rewrite, or higher top_k"
+    },
+    "paper004_q002": {
+      "paper_id": "paper004",
+      "type": "overview/summary",
+      "diagnosis": "Context is partly relevant, answer organization and strict keywords are the main gap.",
+      "preferred_next_step": "eval keyword adjustment and prompt structure"
+    },
+    "paper004_q008": {
+      "paper_id": "paper004",
+      "type": "result/conclusion",
+      "diagnosis": "Context retrieves abstract/future-work signal but not enough conclusion/suggestion wording.",
+      "preferred_next_step": "metadata weighting, rerank, or query rewrite"
+    }
+  },
+  "no_answer_regression": {
+    "case": "paper001_q010",
+    "fixed_pass": true,
+    "fixed_relaxed_pass": true,
+    "heading_pass": false,
+    "heading_relaxed_pass": false,
+    "diagnosis": "Heading answer is semantically correct but misses evaluator no-evidence phrase patterns; not a clear RAG degradation."
+  },
+  "recommendations": [
+    "Fix eval/no-answer judgement first.",
+    "Run targeted retrieval experiments on paper003_q007 and paper004_q008.",
+    "Expand eval keyword aliases for likely_eval_keyword_too_strict cases."
+  ]
+}
