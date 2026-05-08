@@ -1,0 +1,254 @@
+[
+  {
+    "case_id": "paper001_q005",
+    "threshold": 0.25,
+    "topk4": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper001_q005",
+    "threshold": 0.3,
+    "topk4": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper001_q006",
+    "threshold": 0.3,
+    "topk4": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.6667,
+      "relaxed_keyword_hit_rate": 0.6667
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.6667,
+      "relaxed_keyword_hit_rate": 0.6667
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper001_q008",
+    "threshold": 0.25,
+    "topk4": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper004_q001",
+    "threshold": 0.25,
+    "topk4": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.8333,
+      "relaxed_keyword_hit_rate": 0.8333
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper004_q001",
+    "threshold": 0.3,
+    "topk4": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.8333,
+      "relaxed_keyword_hit_rate": 0.8333
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper004_q003",
+    "threshold": 0.3,
+    "topk4": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": false,
+      "fail_reason": "answer_keyword_mismatch",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper004_q003",
+    "threshold": 0.35,
+    "topk4": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 4,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": false,
+      "fail_reason": "answer_keyword_mismatch",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  },
+  {
+    "case_id": "paper005_q001",
+    "threshold": 0.25,
+    "topk4": {
+      "pass": false,
+      "relaxed_pass": false,
+      "fail_reason": "no_retrieval",
+      "retrieved_chunk_count": 0,
+      "keyword_hit_rate": 0.0,
+      "relaxed_keyword_hit_rate": 0.0
+    },
+    "topk6": {
+      "pass": true,
+      "relaxed_pass": true,
+      "fail_reason": null,
+      "retrieved_chunk_count": 6,
+      "keyword_hit_rate": 0.5,
+      "relaxed_keyword_hit_rate": 0.5
+    },
+    "topk8": {
+      "pass": false,
+      "relaxed_pass": true,
+      "fail_reason": "likely_eval_keyword_too_strict",
+      "retrieved_chunk_count": 8,
+      "keyword_hit_rate": 0.3333,
+      "relaxed_keyword_hit_rate": 0.3333
+    }
+  }
+]

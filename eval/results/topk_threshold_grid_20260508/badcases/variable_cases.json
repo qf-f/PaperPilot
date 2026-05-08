@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "paper001_q004",
+    "pass_runs": [
+      "heading_topk8_th025",
+      "heading_topk8_th030"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th035"
+    ]
+  },
+  {
+    "case_id": "paper001_q005",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk8_th025",
+      "heading_topk8_th030"
+    ]
+  },
+  {
+    "case_id": "paper001_q006",
+    "pass_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk8_th030"
+    ]
+  },
+  {
+    "case_id": "paper001_q008",
+    "pass_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk8_th025"
+    ]
+  },
+  {
+    "case_id": "paper003_q005",
+    "pass_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk6_th030",
+      "heading_topk6_th035"
+    ]
+  },
+  {
+    "case_id": "paper003_q008",
+    "pass_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th030"
+    ]
+  },
+  {
+    "case_id": "paper004_q001",
+    "pass_runs": [
+      "heading_topk6_th025",
+      "heading_topk6_th030"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ]
+  },
+  {
+    "case_id": "paper004_q003",
+    "pass_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025"
+    ],
+    "fail_runs": [
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ]
+  },
+  {
+    "case_id": "paper005_q001",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk8_th025"
+    ]
+  },
+  {
+    "case_id": "paper005_q002",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th030",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk6_th025",
+      "heading_topk6_th035"
+    ]
+  },
+  {
+    "case_id": "paper005_q003",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025"
+    ]
+  },
+  {
+    "case_id": "paper005_q004",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025"
+    ]
+  },
+  {
+    "case_id": "paper005_q005",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025"
+    ]
+  },
+  {
+    "case_id": "paper005_q006",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025"
+    ]
+  },
+  {
+    "case_id": "paper005_q007",
+    "pass_runs": [
+      "heading_topk4_th030",
+      "heading_topk8_th030",
+      "heading_topk8_th035"
+    ],
+    "fail_runs": [
+      "heading_topk4_th025",
+      "heading_topk4_th035",
+      "heading_topk6_th025",
+      "heading_topk6_th030",
+      "heading_topk6_th035",
+      "heading_topk8_th025"
+    ]
+  }
+]

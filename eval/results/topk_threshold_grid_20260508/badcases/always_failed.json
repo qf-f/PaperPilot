@@ -1,0 +1,12 @@
+[
+  "paper001_q002 (likely_eval_keyword_too_strict)",
+  "paper001_q007 (likely_eval_keyword_too_strict)",
+  "paper002_q002 (likely_eval_keyword_too_strict)",
+  "paper002_q004 (answer_keyword_mismatch, likely_eval_keyword_too_strict)",
+  "paper002_q008 (answer_keyword_mismatch)",
+  "paper003_q007 (answer_keyword_mismatch, retrieval_context_weak)",
+  "paper004_q005 (likely_eval_keyword_too_strict, retrieval_context_weak)",
+  "paper004_q006 (likely_eval_keyword_too_strict)",
+  "paper004_q007 (answer_keyword_mismatch, retrieval_context_weak)",
+  "paper005_q008 (answer_keyword_mismatch, likely_eval_keyword_too_strict)"
+]
