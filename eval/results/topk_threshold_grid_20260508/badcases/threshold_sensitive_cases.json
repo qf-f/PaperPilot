@@ -1,0 +1,344 @@
+[
+  {
+    "case_id": "paper001_q004",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper001_q005",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper001_q005",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        false
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper001_q006",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        false
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper001_q008",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper003_q005",
+    "top_k": 6,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        false
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper003_q008",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        false
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper004_q001",
+    "top_k": 6,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper004_q003",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        true
+      ],
+      [
+        0.3,
+        false
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q001",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q001",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q002",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q002",
+    "top_k": 6,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q003",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q004",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q005",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q006",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q007",
+    "top_k": 4,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        false
+      ]
+    ]
+  },
+  {
+    "case_id": "paper005_q007",
+    "top_k": 8,
+    "statuses": [
+      [
+        0.25,
+        false
+      ],
+      [
+        0.3,
+        true
+      ],
+      [
+        0.35,
+        true
+      ]
+    ]
+  }
+]

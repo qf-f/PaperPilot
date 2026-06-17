@@ -1,0 +1,25 @@
+{
+  "project_id": "1a636e72-447b-411d-9f44-a401d1e23d48",
+  "documents": {
+    "paper001": {
+      "document_id": "d175aacc-f0fd-49da-83b3-9a89cafc396c",
+      "file_name": "aam20250700000_44757578.pdf"
+    },
+    "paper002": {
+      "document_id": "45e1e981-ba7b-40d4-9704-4000ae76f487",
+      "file_name": "aam2025141_232624279.pdf"
+    },
+    "paper003": {
+      "document_id": "57541e95-8b9d-4e4e-a8ce-f811c58d3da6",
+      "file_name": "aam_2624670.pdf"
+    },
+    "paper004": {
+      "document_id": "767de5d0-3516-453f-b3b6-8f58501a2e5f",
+      "file_name": "基于深度学习的图像融合方法综述_唐霖峰.pdf"
+    },
+    "paper005": {
+      "document_id": "adbc743b-7d1a-41d2-aa68-5fe59c8da31a",
+      "file_name": "深度学习的目标检测算法改进综述_杨锋.pdf"
+    }
+  }
+}

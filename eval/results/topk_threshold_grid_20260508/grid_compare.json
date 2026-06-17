@@ -1,0 +1,1078 @@
+{
+  "sorted_by_pass_rate_relaxed_pass_rate": [
+    {
+      "top_k": 6,
+      "similarity_threshold": 0.3,
+      "total": 50,
+      "passed": 37,
+      "pass_rate": 0.74,
+      "relaxed_passed": 45,
+      "relaxed_pass_rate": 0.9,
+      "avg_keyword_hit_rate": 0.4592,
+      "avg_relaxed_keyword_hit_rate": 0.4779,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 3,
+      "likely_eval_keyword_too_strict_count": 8,
+      "retrieval_context_weak_count": 2,
+      "timeout_count": 0,
+      "run_slug": "heading_topk6_th030",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_summary_heading_topk6_th030_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_result_heading_topk6_th030_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_badcases_heading_topk6_th030_eval_v2.jsonl"
+    },
+    {
+      "top_k": 4,
+      "similarity_threshold": 0.3,
+      "total": 50,
+      "passed": 37,
+      "pass_rate": 0.74,
+      "relaxed_passed": 45,
+      "relaxed_pass_rate": 0.9,
+      "avg_keyword_hit_rate": 0.4508,
+      "avg_relaxed_keyword_hit_rate": 0.4614,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 1,
+      "likely_eval_keyword_too_strict_count": 8,
+      "retrieval_context_weak_count": 4,
+      "timeout_count": 0,
+      "run_slug": "heading_topk4_th030",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th030\\rag_eval_summary_heading_topk4_th030_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th030\\rag_eval_result_heading_topk4_th030_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th030\\rag_eval_badcases_heading_topk4_th030_eval_v2.jsonl"
+    },
+    {
+      "top_k": 6,
+      "similarity_threshold": 0.25,
+      "total": 50,
+      "passed": 37,
+      "pass_rate": 0.74,
+      "relaxed_passed": 44,
+      "relaxed_pass_rate": 0.88,
+      "avg_keyword_hit_rate": 0.4639,
+      "avg_relaxed_keyword_hit_rate": 0.4826,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 4,
+      "likely_eval_keyword_too_strict_count": 7,
+      "retrieval_context_weak_count": 2,
+      "timeout_count": 0,
+      "run_slug": "heading_topk6_th025",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th025\\rag_eval_summary_heading_topk6_th025_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th025\\rag_eval_result_heading_topk6_th025_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th025\\rag_eval_badcases_heading_topk6_th025_eval_v2.jsonl"
+    },
+    {
+      "top_k": 4,
+      "similarity_threshold": 0.35,
+      "total": 50,
+      "passed": 37,
+      "pass_rate": 0.74,
+      "relaxed_passed": 44,
+      "relaxed_pass_rate": 0.88,
+      "avg_keyword_hit_rate": 0.4523,
+      "avg_relaxed_keyword_hit_rate": 0.463,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 2,
+      "likely_eval_keyword_too_strict_count": 7,
+      "retrieval_context_weak_count": 4,
+      "timeout_count": 0,
+      "run_slug": "heading_topk4_th035",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th035\\rag_eval_summary_heading_topk4_th035_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th035\\rag_eval_result_heading_topk4_th035_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th035\\rag_eval_badcases_heading_topk4_th035_eval_v2.jsonl"
+    },
+    {
+      "top_k": 8,
+      "similarity_threshold": 0.35,
+      "total": 50,
+      "passed": 37,
+      "pass_rate": 0.74,
+      "relaxed_passed": 43,
+      "relaxed_pass_rate": 0.86,
+      "avg_keyword_hit_rate": 0.457,
+      "avg_relaxed_keyword_hit_rate": 0.4757,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 6,
+      "likely_eval_keyword_too_strict_count": 6,
+      "retrieval_context_weak_count": 1,
+      "timeout_count": 0,
+      "run_slug": "heading_topk8_th035",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th035\\rag_eval_summary_heading_topk8_th035_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th035\\rag_eval_result_heading_topk8_th035_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th035\\rag_eval_badcases_heading_topk8_th035_eval_v2.jsonl"
+    },
+    {
+      "top_k": 8,
+      "similarity_threshold": 0.3,
+      "total": 50,
+      "passed": 36,
+      "pass_rate": 0.72,
+      "relaxed_passed": 43,
+      "relaxed_pass_rate": 0.86,
+      "avg_keyword_hit_rate": 0.4347,
+      "avg_relaxed_keyword_hit_rate": 0.4533,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 6,
+      "likely_eval_keyword_too_strict_count": 7,
+      "retrieval_context_weak_count": 1,
+      "timeout_count": 0,
+      "run_slug": "heading_topk8_th030",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_summary_heading_topk8_th030_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_result_heading_topk8_th030_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_badcases_heading_topk8_th030_eval_v2.jsonl"
+    },
+    {
+      "top_k": 8,
+      "similarity_threshold": 0.25,
+      "total": 50,
+      "passed": 35,
+      "pass_rate": 0.7,
+      "relaxed_passed": 44,
+      "relaxed_pass_rate": 0.88,
+      "avg_keyword_hit_rate": 0.448,
+      "avg_relaxed_keyword_hit_rate": 0.4627,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 5,
+      "likely_eval_keyword_too_strict_count": 9,
+      "retrieval_context_weak_count": 1,
+      "timeout_count": 0,
+      "run_slug": "heading_topk8_th025",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th025\\rag_eval_summary_heading_topk8_th025_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th025\\rag_eval_result_heading_topk8_th025_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th025\\rag_eval_badcases_heading_topk8_th025_eval_v2.jsonl"
+    },
+    {
+      "top_k": 6,
+      "similarity_threshold": 0.35,
+      "total": 50,
+      "passed": 35,
+      "pass_rate": 0.7,
+      "relaxed_passed": 43,
+      "relaxed_pass_rate": 0.86,
+      "avg_keyword_hit_rate": 0.4521,
+      "avg_relaxed_keyword_hit_rate": 0.4668,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 0,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 4,
+      "likely_eval_keyword_too_strict_count": 8,
+      "retrieval_context_weak_count": 3,
+      "timeout_count": 0,
+      "run_slug": "heading_topk6_th035",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th035\\rag_eval_summary_heading_topk6_th035_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th035\\rag_eval_result_heading_topk6_th035_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th035\\rag_eval_badcases_heading_topk6_th035_eval_v2.jsonl"
+    },
+    {
+      "top_k": 4,
+      "similarity_threshold": 0.25,
+      "total": 50,
+      "passed": 30,
+      "pass_rate": 0.6,
+      "relaxed_passed": 37,
+      "relaxed_pass_rate": 0.74,
+      "avg_keyword_hit_rate": 0.3375,
+      "avg_relaxed_keyword_hit_rate": 0.3482,
+      "unanswerable_pass_rate": 1.0,
+      "no_retrieval_count": 7,
+      "wrong_document_count": 0,
+      "answer_keyword_mismatch_count": 2,
+      "likely_eval_keyword_too_strict_count": 7,
+      "retrieval_context_weak_count": 4,
+      "timeout_count": 0,
+      "run_slug": "heading_topk4_th025",
+      "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th025\\rag_eval_summary_heading_topk4_th025_eval_v2.json",
+      "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th025\\rag_eval_result_heading_topk4_th025_eval_v2.jsonl",
+      "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk4_th025\\rag_eval_badcases_heading_topk4_th025_eval_v2.jsonl"
+    }
+  ],
+  "best": {
+    "top_k": 6,
+    "similarity_threshold": 0.3,
+    "total": 50,
+    "passed": 37,
+    "pass_rate": 0.74,
+    "relaxed_passed": 45,
+    "relaxed_pass_rate": 0.9,
+    "avg_keyword_hit_rate": 0.4592,
+    "avg_relaxed_keyword_hit_rate": 0.4779,
+    "unanswerable_pass_rate": 1.0,
+    "no_retrieval_count": 0,
+    "wrong_document_count": 0,
+    "answer_keyword_mismatch_count": 3,
+    "likely_eval_keyword_too_strict_count": 8,
+    "retrieval_context_weak_count": 2,
+    "timeout_count": 0,
+    "run_slug": "heading_topk6_th030",
+    "summary_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_summary_heading_topk6_th030_eval_v2.json",
+    "result_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_result_heading_topk6_th030_eval_v2.jsonl",
+    "badcases_path": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk6_th030\\rag_eval_badcases_heading_topk6_th030_eval_v2.jsonl"
+  },
+  "case_analysis": {
+    "always_failed": [
+      "paper001_q002 (likely_eval_keyword_too_strict)",
+      "paper001_q007 (likely_eval_keyword_too_strict)",
+      "paper002_q002 (likely_eval_keyword_too_strict)",
+      "paper002_q004 (answer_keyword_mismatch, likely_eval_keyword_too_strict)",
+      "paper002_q008 (answer_keyword_mismatch)",
+      "paper003_q007 (answer_keyword_mismatch, retrieval_context_weak)",
+      "paper004_q005 (likely_eval_keyword_too_strict, retrieval_context_weak)",
+      "paper004_q006 (likely_eval_keyword_too_strict)",
+      "paper004_q007 (answer_keyword_mismatch, retrieval_context_weak)",
+      "paper005_q008 (answer_keyword_mismatch, likely_eval_keyword_too_strict)"
+    ],
+    "variable_cases": [
+      {
+        "case_id": "paper001_q004",
+        "pass_runs": [
+          "heading_topk8_th025",
+          "heading_topk8_th030"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th035"
+        ]
+      },
+      {
+        "case_id": "paper001_q005",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk8_th025",
+          "heading_topk8_th030"
+        ]
+      },
+      {
+        "case_id": "paper001_q006",
+        "pass_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk8_th030"
+        ]
+      },
+      {
+        "case_id": "paper001_q008",
+        "pass_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk8_th025"
+        ]
+      },
+      {
+        "case_id": "paper003_q005",
+        "pass_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk6_th030",
+          "heading_topk6_th035"
+        ]
+      },
+      {
+        "case_id": "paper003_q008",
+        "pass_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th030"
+        ]
+      },
+      {
+        "case_id": "paper004_q001",
+        "pass_runs": [
+          "heading_topk6_th025",
+          "heading_topk6_th030"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ]
+      },
+      {
+        "case_id": "paper004_q003",
+        "pass_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025"
+        ],
+        "fail_runs": [
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ]
+      },
+      {
+        "case_id": "paper005_q001",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk8_th025"
+        ]
+      },
+      {
+        "case_id": "paper005_q002",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th030",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk6_th025",
+          "heading_topk6_th035"
+        ]
+      },
+      {
+        "case_id": "paper005_q003",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025"
+        ]
+      },
+      {
+        "case_id": "paper005_q004",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025"
+        ]
+      },
+      {
+        "case_id": "paper005_q005",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025"
+        ]
+      },
+      {
+        "case_id": "paper005_q006",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025"
+        ]
+      },
+      {
+        "case_id": "paper005_q007",
+        "pass_runs": [
+          "heading_topk4_th030",
+          "heading_topk8_th030",
+          "heading_topk8_th035"
+        ],
+        "fail_runs": [
+          "heading_topk4_th025",
+          "heading_topk4_th035",
+          "heading_topk6_th025",
+          "heading_topk6_th030",
+          "heading_topk6_th035",
+          "heading_topk8_th025"
+        ]
+      }
+    ],
+    "topk_noise_cases": [
+      {
+        "case_id": "paper001_q005",
+        "threshold": 0.25,
+        "topk4": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper001_q005",
+        "threshold": 0.3,
+        "topk4": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper001_q006",
+        "threshold": 0.3,
+        "topk4": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.6667,
+          "relaxed_keyword_hit_rate": 0.6667
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.6667,
+          "relaxed_keyword_hit_rate": 0.6667
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper001_q008",
+        "threshold": 0.25,
+        "topk4": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper004_q001",
+        "threshold": 0.25,
+        "topk4": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.8333,
+          "relaxed_keyword_hit_rate": 0.8333
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper004_q001",
+        "threshold": 0.3,
+        "topk4": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.8333,
+          "relaxed_keyword_hit_rate": 0.8333
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper004_q003",
+        "threshold": 0.3,
+        "topk4": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": false,
+          "fail_reason": "answer_keyword_mismatch",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper004_q003",
+        "threshold": 0.35,
+        "topk4": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 4,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": false,
+          "fail_reason": "answer_keyword_mismatch",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      },
+      {
+        "case_id": "paper005_q001",
+        "threshold": 0.25,
+        "topk4": {
+          "pass": false,
+          "relaxed_pass": false,
+          "fail_reason": "no_retrieval",
+          "retrieved_chunk_count": 0,
+          "keyword_hit_rate": 0.0,
+          "relaxed_keyword_hit_rate": 0.0
+        },
+        "topk6": {
+          "pass": true,
+          "relaxed_pass": true,
+          "fail_reason": null,
+          "retrieved_chunk_count": 6,
+          "keyword_hit_rate": 0.5,
+          "relaxed_keyword_hit_rate": 0.5
+        },
+        "topk8": {
+          "pass": false,
+          "relaxed_pass": true,
+          "fail_reason": "likely_eval_keyword_too_strict",
+          "retrieved_chunk_count": 8,
+          "keyword_hit_rate": 0.3333,
+          "relaxed_keyword_hit_rate": 0.3333
+        }
+      }
+    ],
+    "threshold_sensitive_cases": [
+      {
+        "case_id": "paper001_q004",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper001_q005",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper001_q005",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            false
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper001_q006",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            false
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper001_q008",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper003_q005",
+        "top_k": 6,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            false
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper003_q008",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            false
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper004_q001",
+        "top_k": 6,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper004_q003",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            true
+          ],
+          [
+            0.3,
+            false
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q001",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q001",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q002",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q002",
+        "top_k": 6,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q003",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q004",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q005",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q006",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q007",
+        "top_k": 4,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            false
+          ]
+        ]
+      },
+      {
+        "case_id": "paper005_q007",
+        "top_k": 8,
+        "statuses": [
+          [
+            0.25,
+            false
+          ],
+          [
+            0.3,
+            true
+          ],
+          [
+            0.35,
+            true
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "baseline_fixed": {
+    "total": 50,
+    "pass": 32,
+    "pass_rate": 0.64,
+    "avg_keyword_hit_rate": 0.446,
+    "no_answer_strict": "8/10",
+    "no_answer_relaxed": "10/10"
+  },
+  "heading": {
+    "total": 50,
+    "pass": 34,
+    "pass_rate": 0.68,
+    "avg_keyword_hit_rate": 0.427,
+    "no_answer_strict": "9/10",
+    "no_answer_relaxed": "9/10",
+    "badcases": 16,
+    "by_paper": {
+      "paper001": {
+        "pass": 6,
+        "total": 10,
+        "pass_rate": 0.6
+      },
+      "paper002": {
+        "pass": 7,
+        "total": 10,
+        "pass_rate": 0.7
+      },
+      "paper003": {
+        "pass": 8,
+        "total": 10,
+        "pass_rate": 0.8
+      },
+      "paper004": {
+        "pass": 5,
+        "total": 10,
+        "pass_rate": 0.5
+      },
+      "paper005": {
+        "pass": 8,
+        "total": 10,
+        "pass_rate": 0.8
+      }
+    },
+    "fail_reasons": {
+      "likely_eval_keyword_too_strict": 9,
+      "retrieval_context_weak": 4,
+      "answer_keyword_mismatch": 3
+    }
+  },
+  "delta": {
+    "total": 0,
+    "pass": 2,
+    "pass_rate": 0.04,
+    "avg_keyword_hit_rate": -0.019,
+    "no_answer_strict_pass": 1,
+    "no_answer_relaxed_pass": -1
+  }
+}

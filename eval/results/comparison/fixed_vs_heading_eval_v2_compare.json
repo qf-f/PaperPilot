@@ -1,0 +1,637 @@
+{
+  "fixed_eval_v1": {
+    "total": 50,
+    "passed": 32,
+    "pass_rate": 0.64,
+    "strict_pass_rate": 0.64,
+    "relaxed_passed": 43,
+    "relaxed_pass_rate": 0.86,
+    "avg_keyword_hit_rate": 0.446,
+    "avg_relaxed_keyword_hit_rate": 0.4574,
+    "unanswerable_total": 10,
+    "unanswerable_passed": 8,
+    "unanswerable_pass_rate": 0.8,
+    "relaxed_unanswerable_passed": 10,
+    "relaxed_unanswerable_pass_rate": 1.0,
+    "no_retrieval_count": 0,
+    "wrong_document_count": 0,
+    "answer_keyword_mismatch_count": 3,
+    "likely_eval_keyword_too_strict_count": 11,
+    "retrieval_context_weak_count": 4,
+    "timeout_count": 0,
+    "by_paper": {
+      "paper001": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 10,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 1.0,
+        "avg_keyword_hit_rate": 0.4733,
+        "avg_relaxed_keyword_hit_rate": 0.53,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper002": {
+        "total": 10,
+        "passed": 6,
+        "relaxed_passed": 9,
+        "pass_rate": 0.6,
+        "strict_pass_rate": 0.6,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4083,
+        "avg_relaxed_keyword_hit_rate": 0.4083,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper003": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 9,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.6252,
+        "avg_relaxed_keyword_hit_rate": 0.6252,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 1,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper004": {
+        "total": 10,
+        "passed": 3,
+        "relaxed_passed": 6,
+        "pass_rate": 0.3,
+        "strict_pass_rate": 0.3,
+        "relaxed_pass_rate": 0.6,
+        "avg_keyword_hit_rate": 0.24,
+        "avg_relaxed_keyword_hit_rate": 0.24,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 3,
+        "timeout_count": 0
+      },
+      "paper005": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 9,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4833,
+        "avg_relaxed_keyword_hit_rate": 0.4833,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 1,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      }
+    },
+    "by_fail_reason": {
+      "no_retrieval": 0,
+      "wrong_document": 0,
+      "answer_keyword_mismatch": 3,
+      "likely_eval_keyword_too_strict": 11,
+      "unanswerable_failed": 0,
+      "retrieval_context_weak": 4,
+      "timeout": 0,
+      "rag_error": 0,
+      "unknown": 0
+    }
+  },
+  "fixed_eval_v2": {
+    "total": 50,
+    "passed": 34,
+    "pass_rate": 0.68,
+    "strict_pass_rate": 0.68,
+    "relaxed_passed": 44,
+    "relaxed_pass_rate": 0.88,
+    "avg_keyword_hit_rate": 0.4546,
+    "avg_relaxed_keyword_hit_rate": 0.4659,
+    "unanswerable_total": 10,
+    "unanswerable_passed": 10,
+    "unanswerable_pass_rate": 1.0,
+    "relaxed_unanswerable_passed": 10,
+    "relaxed_unanswerable_pass_rate": 1.0,
+    "no_retrieval_count": 0,
+    "wrong_document_count": 0,
+    "answer_keyword_mismatch_count": 4,
+    "likely_eval_keyword_too_strict_count": 10,
+    "retrieval_context_weak_count": 2,
+    "timeout_count": 0,
+    "by_paper": {
+      "paper001": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 10,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 1.0,
+        "avg_keyword_hit_rate": 0.4733,
+        "avg_relaxed_keyword_hit_rate": 0.53,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper002": {
+        "total": 10,
+        "passed": 6,
+        "relaxed_passed": 9,
+        "pass_rate": 0.6,
+        "strict_pass_rate": 0.6,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4083,
+        "avg_relaxed_keyword_hit_rate": 0.4083,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper003": {
+        "total": 10,
+        "passed": 9,
+        "relaxed_passed": 9,
+        "pass_rate": 0.9,
+        "strict_pass_rate": 0.9,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.6252,
+        "avg_relaxed_keyword_hit_rate": 0.6252,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 0,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper004": {
+        "total": 10,
+        "passed": 4,
+        "relaxed_passed": 7,
+        "pass_rate": 0.4,
+        "strict_pass_rate": 0.4,
+        "relaxed_pass_rate": 0.7,
+        "avg_keyword_hit_rate": 0.2829,
+        "avg_relaxed_keyword_hit_rate": 0.2829,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 2,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper005": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 9,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4833,
+        "avg_relaxed_keyword_hit_rate": 0.4833,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 1,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      }
+    },
+    "by_fail_reason": {
+      "no_retrieval": 0,
+      "wrong_document": 0,
+      "answer_keyword_mismatch": 4,
+      "likely_eval_keyword_too_strict": 10,
+      "unanswerable_failed": 0,
+      "retrieval_context_weak": 2,
+      "timeout": 0,
+      "rag_error": 0,
+      "unknown": 0
+    },
+    "eval_version": "v2",
+    "source_result": "eval\\results\\baseline_fixed_20260503\\rag_eval_result_5papers.jsonl",
+    "dataset": "eval\\rag_eval_dataset_5papers_checked.jsonl"
+  },
+  "heading_eval_v1": {
+    "total": 50,
+    "passed": 34,
+    "pass_rate": 0.68,
+    "strict_pass_rate": 0.68,
+    "relaxed_passed": 43,
+    "relaxed_pass_rate": 0.86,
+    "avg_keyword_hit_rate": 0.427,
+    "avg_relaxed_keyword_hit_rate": 0.4457,
+    "unanswerable_total": 10,
+    "unanswerable_passed": 9,
+    "unanswerable_pass_rate": 0.9,
+    "relaxed_unanswerable_passed": 9,
+    "relaxed_unanswerable_pass_rate": 0.9,
+    "no_retrieval_count": 0,
+    "wrong_document_count": 0,
+    "answer_keyword_mismatch_count": 3,
+    "likely_eval_keyword_too_strict_count": 9,
+    "retrieval_context_weak_count": 4,
+    "timeout_count": 0,
+    "by_paper": {
+      "paper001": {
+        "total": 10,
+        "passed": 6,
+        "relaxed_passed": 9,
+        "pass_rate": 0.6,
+        "strict_pass_rate": 0.6,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4733,
+        "avg_relaxed_keyword_hit_rate": 0.5667,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper002": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 9,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4167,
+        "avg_relaxed_keyword_hit_rate": 0.4167,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 2,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper003": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 8,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.8,
+        "avg_keyword_hit_rate": 0.4829,
+        "avg_relaxed_keyword_hit_rate": 0.4829,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 0,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper004": {
+        "total": 10,
+        "passed": 5,
+        "relaxed_passed": 8,
+        "pass_rate": 0.5,
+        "strict_pass_rate": 0.5,
+        "relaxed_pass_rate": 0.8,
+        "avg_keyword_hit_rate": 0.31,
+        "avg_relaxed_keyword_hit_rate": 0.31,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 2,
+        "timeout_count": 0
+      },
+      "paper005": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 9,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4524,
+        "avg_relaxed_keyword_hit_rate": 0.4524,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 1,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      }
+    },
+    "by_fail_reason": {
+      "no_retrieval": 0,
+      "wrong_document": 0,
+      "answer_keyword_mismatch": 3,
+      "likely_eval_keyword_too_strict": 9,
+      "unanswerable_failed": 0,
+      "retrieval_context_weak": 4,
+      "timeout": 0,
+      "rag_error": 0,
+      "unknown": 0
+    }
+  },
+  "heading_eval_v2": {
+    "total": 50,
+    "passed": 37,
+    "pass_rate": 0.74,
+    "strict_pass_rate": 0.74,
+    "relaxed_passed": 46,
+    "relaxed_pass_rate": 0.92,
+    "avg_keyword_hit_rate": 0.457,
+    "avg_relaxed_keyword_hit_rate": 0.4757,
+    "unanswerable_total": 10,
+    "unanswerable_passed": 10,
+    "unanswerable_pass_rate": 1.0,
+    "relaxed_unanswerable_passed": 10,
+    "relaxed_unanswerable_pass_rate": 1.0,
+    "no_retrieval_count": 0,
+    "wrong_document_count": 0,
+    "answer_keyword_mismatch_count": 3,
+    "likely_eval_keyword_too_strict_count": 9,
+    "retrieval_context_weak_count": 1,
+    "timeout_count": 0,
+    "by_paper": {
+      "paper001": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 10,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 1.0,
+        "avg_keyword_hit_rate": 0.4733,
+        "avg_relaxed_keyword_hit_rate": 0.5667,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper002": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 9,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4167,
+        "avg_relaxed_keyword_hit_rate": 0.4167,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 2,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper003": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 8,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.8,
+        "avg_keyword_hit_rate": 0.4829,
+        "avg_relaxed_keyword_hit_rate": 0.4829,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 0,
+        "retrieval_context_weak_count": 1,
+        "timeout_count": 0
+      },
+      "paper004": {
+        "total": 10,
+        "passed": 7,
+        "relaxed_passed": 10,
+        "pass_rate": 0.7,
+        "strict_pass_rate": 0.7,
+        "relaxed_pass_rate": 1.0,
+        "avg_keyword_hit_rate": 0.46,
+        "avg_relaxed_keyword_hit_rate": 0.46,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 0,
+        "likely_eval_keyword_too_strict_count": 3,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      },
+      "paper005": {
+        "total": 10,
+        "passed": 8,
+        "relaxed_passed": 9,
+        "pass_rate": 0.8,
+        "strict_pass_rate": 0.8,
+        "relaxed_pass_rate": 0.9,
+        "avg_keyword_hit_rate": 0.4524,
+        "avg_relaxed_keyword_hit_rate": 0.4524,
+        "no_retrieval_count": 0,
+        "wrong_document_count": 0,
+        "answer_keyword_mismatch_count": 1,
+        "likely_eval_keyword_too_strict_count": 1,
+        "retrieval_context_weak_count": 0,
+        "timeout_count": 0
+      }
+    },
+    "by_fail_reason": {
+      "no_retrieval": 0,
+      "wrong_document": 0,
+      "answer_keyword_mismatch": 3,
+      "likely_eval_keyword_too_strict": 9,
+      "unanswerable_failed": 0,
+      "retrieval_context_weak": 1,
+      "timeout": 0,
+      "rag_error": 0,
+      "unknown": 0
+    },
+    "eval_version": "v2",
+    "source_result": "eval\\results\\heading_20260504\\rag_eval_result_heading.jsonl",
+    "dataset": "eval\\rag_eval_dataset_5papers_checked.jsonl"
+  },
+  "dataset_patch": {
+    "edited_cases": [
+      "paper004_q002",
+      "paper004_q008"
+    ],
+    "change": "Added expected_keyword_groups for clear synonym / Chinese-English expression alignment. Original expected_keywords were preserved."
+  },
+  "focus_cases": {
+    "paper004_q002": {
+      "fixed_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "fixed_v2": {
+        "pass": false,
+        "relaxed_pass": true,
+        "fail_reason": "likely_eval_keyword_too_strict",
+        "keyword_hit_rate": 0.4286,
+        "keyword_hits": [
+          "网络架构|网络结构|architecture|network architecture",
+          "监督范式|监督方式|supervised|unsupervised|supervision paradigm",
+          "评估指标|评价指标|evaluation metrics|metrics"
+        ]
+      },
+      "heading_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.1667,
+        "keyword_hits": [
+          "运行效率"
+        ]
+      },
+      "heading_v2": {
+        "pass": true,
+        "relaxed_pass": true,
+        "fail_reason": null,
+        "keyword_hit_rate": 1.0,
+        "keyword_hits": [
+          "网络架构|网络结构|architecture|network architecture",
+          "监督范式|监督方式|supervised|unsupervised|supervision paradigm",
+          "数据集|常用数据集|主流数据集|datasets",
+          "评估指标|评价指标|evaluation metrics|metrics",
+          "定性评估|定性分析|定性实验|qualitative evaluation|qualitative analysis",
+          "定量评估|定量分析|定量实验|quantitative evaluation|quantitative analysis",
+          "运行效率|计算效率|运行效率实验|runtime efficiency|efficiency"
+        ]
+      }
+    },
+    "paper004_q008": {
+      "fixed_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "fixed_v2": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "answer_keyword_mismatch",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "heading_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.1667,
+        "keyword_hits": [
+          "监督范式"
+        ]
+      },
+      "heading_v2": {
+        "pass": true,
+        "relaxed_pass": true,
+        "fail_reason": null,
+        "keyword_hit_rate": 0.8333,
+        "keyword_hits": [
+          "不同场景|融合场景|具体融合场景|non-registered image fusion|high-level vision task-driven image fusion|cross-resolution image fusion|real-time image fusion|color image fusion|image fusion under extreme conditions",
+          "监督范式|监督方式|有监督|无监督|弱监督|supervised|unsupervised|supervision paradigm",
+          "算法局限性|现有算法的局限性|局限性|limitations|challenges|关键挑战",
+          "研究建议|改进方向|发展方向|前瞻性建议|forecasting analysis|future work|perspective",
+          "后续研究|未来研究|进一步研究|后续图像融合研究|未来亟需突破|future research"
+        ]
+      }
+    },
+    "paper003_q007": {
+      "fixed_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "answer_keyword_mismatch",
+        "keyword_hit_rate": 0.3333,
+        "keyword_hits": [
+          "分类性能",
+          "运行效率"
+        ]
+      },
+      "fixed_v2": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "answer_keyword_mismatch",
+        "keyword_hit_rate": 0.3333,
+        "keyword_hits": [
+          "分类性能",
+          "运行效率"
+        ]
+      },
+      "heading_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "heading_v2": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      }
+    },
+    "paper004_q005": {
+      "fixed_v1": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "fixed_v2": {
+        "pass": false,
+        "relaxed_pass": false,
+        "fail_reason": "retrieval_context_weak",
+        "keyword_hit_rate": 0.0,
+        "keyword_hits": []
+      },
+      "heading_v1": {
+        "pass": false,
+        "relaxed_pass": true,
+        "fail_reason": "likely_eval_keyword_too_strict",
+        "keyword_hit_rate": 0.2,
+        "keyword_hits": [
+          "定量实验"
+        ]
+      },
+      "heading_v2": {
+        "pass": false,
+        "relaxed_pass": true,
+        "fail_reason": "likely_eval_keyword_too_strict",
+        "keyword_hit_rate": 0.2,
+        "keyword_hits": [
+          "定量实验"
+        ]
+      }
+    }
+  },
+  "conclusion": {
+    "heading_still_better_than_fixed_eval_v2": true,
+    "fixed_to_heading_delta_eval_v1": 2,
+    "fixed_to_heading_delta_eval_v2": 3,
+    "remaining_retrieval_context_weak_heading_v2": [
+      "paper003_q007"
+    ],
+    "remaining_retrieval_context_weak_fixed_v2": [
+      "paper002_q008",
+      "paper004_q005"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "run_slug": "heading_topk8_th030",
+  "project_id": "1a636e72-447b-411d-9f44-a401d1e23d48",
+  "chunk_strategy": "heading",
+  "top_k": 8,
+  "similarity_threshold": 0.3,
+  "min_keyword_hit_rate": 0.5,
+  "raw_result": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_result_heading_topk8_th030.jsonl",
+  "raw_summary": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_summary_heading_topk8_th030.json",
+  "eval_v2_result": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_result_heading_topk8_th030_eval_v2.jsonl",
+  "eval_v2_summary": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_summary_heading_topk8_th030_eval_v2.json",
+  "eval_v2_badcases": "eval\\results\\topk_threshold_grid_20260508\\runs\\heading_topk8_th030\\rag_eval_badcases_heading_topk8_th030_eval_v2.jsonl",
+  "notes": [
+    "Runs the existing knowledge QA LangGraph directly to avoid ChatService persistence.",
+    "Does not upload, parse, re-chunk, or re-embed documents."
+  ]
+}
